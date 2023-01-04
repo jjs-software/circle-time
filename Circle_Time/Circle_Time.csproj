@@ -61,6 +61,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="settings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,14 +85,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="settings.resx">
       <DependentUpon>settings.cs</DependentUpon>
     </EmbeddedResource>
@@ -193,6 +193,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\backbutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\presentation1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\classroombg2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\classroombg3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disneybg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disneybg2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disneybg3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nintendobg2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nintendobg3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nintendobg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cliford1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pbskidsbg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pbskidsbg2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pbskidsbg3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Circle_Time
@@ -19,6 +17,8 @@ namespace Circle_Time
         public string FolderName { get => folderName; set => folderName = value; }
         public List<string> AllStudents { get; set; }
         public List<string> AllTeachers { get; set; }
+        public bool studentsListUpdated = false;
+        public bool teachersListUpdated = false;
         /// <summary>
         ///  Save Photo  Student & Teachers 
         /// </summary>
@@ -56,11 +56,13 @@ namespace Circle_Time
             {
                 string path = filelocation + @"\" + peopleName + ".jpg";
                 File.Delete(path);
+                teachersListUpdated = true;
             }
             if (peopleType == "student")
             {
                 string path = filelocation + @"\" + peopleName + ".jpg";
                 File.Delete(path);
+                studentsListUpdated = true;
             }
         }
 
@@ -68,6 +70,8 @@ namespace Circle_Time
         // Delete teacher and students from list including photo
         public void deleteFromList(string peopleType, string peopleName)
         {
+            teachersListUpdated = true;
+            studentsListUpdated = true;
             if (peopleType == "teacher")
             {
                 string path = @"teachers.txt";
@@ -75,6 +79,8 @@ namespace Circle_Time
                 AllTeachers = File.ReadAllLines(filelocation + @"\" + path).ToList();
                 AllTeachers.Remove(peopleName);
                 File.WriteAllLines(filelocation + @"\" + path, AllTeachers);
+                // added because when a person is deleted the list is updated 
+                teachersListUpdated = true;
             }
             if (peopleType == "student")
             {
@@ -83,6 +89,7 @@ namespace Circle_Time
                 AllStudents = File.ReadAllLines(filelocation + @"\" + path).ToList();
                 AllStudents.Remove(peopleName);
                 File.WriteAllLines(filelocation + @"\" + path, AllStudents);
+                // added because when a person is deleted the list is updated 
             }
         }
         /// <summary>
@@ -104,6 +111,7 @@ namespace Circle_Time
                 string filelocation = directory + folderName;
                 peopleName = peopleName + Environment.NewLine;
                 File.AppendAllText(filelocation + @"\" + path, peopleName);
+                teachersListUpdated = true;
             }
 
             if (peopleType == "student")
@@ -112,6 +120,7 @@ namespace Circle_Time
                 string filelocation = directory + folderName;
                 peopleName = peopleName + Environment.NewLine;
                 File.AppendAllText(filelocation + @"\" + path, peopleName);
+                studentsListUpdated = true;
             }
         }
 

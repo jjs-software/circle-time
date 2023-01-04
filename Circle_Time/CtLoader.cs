@@ -16,8 +16,8 @@ namespace Circle_Time
         string directory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
         private string folderName = @"\circle_time";
 
-        // Load Students Photos into Tab2
-        public void LoadStudentPhotos(int index)
+            // Load Students Photos into Tab2
+            public void LoadStudentPhotos(int index)
         {
             PictureBox[] pics = new PictureBox[6];
             string path = @"students.txt";
@@ -26,7 +26,7 @@ namespace Circle_Time
 
             foreach (var item in allLinesText)
             {
-                Console.WriteLine(item);
+                //Console.WriteLine(item);
                 index = allLinesText.IndexOf(item);
                 //index = index + 1;
                 //  pictureFile = filelocation + @"\" +  Name + ".jpg";
@@ -38,7 +38,7 @@ namespace Circle_Time
                 pics[index].Size = new Size(125, 107);
                 pics[index].Draggable(true);
                 form1.background2_pb.Controls.Add(pics[index]);
-                Console.WriteLine(index);
+                //Console.WriteLine(index);
                 pics[index].Image = b;
                 //pics[index].Location = new Point(184 + index + 100, 185);
                 if (index == 0)
@@ -81,7 +81,7 @@ namespace Circle_Time
 
             foreach (var item in allLinesText2)
             {
-                Console.WriteLine(item);
+                //Console.WriteLine(item);
                 index = allLinesText2.IndexOf(item);
                 //index = index + 1;
                 //  pictureFile = filelocation + @"\" +  Name + ".jpg";
@@ -93,7 +93,7 @@ namespace Circle_Time
                 pics[index].Size = new Size(125, 107);
                 pics[index].Draggable(true);
                 form1.background3_pb.Controls.Add(pics[index]);
-                Console.WriteLine(index);
+                //Console.WriteLine(index);
                 pics[index].Image = b;
                 //pics[index].Location = new Point(184 + index + 100, 185);
                 if (index == 0)
@@ -125,6 +125,18 @@ namespace Circle_Time
                 }
             }
         }
-
+        // destroy pic boxes
+        public void DestroyPicBoxes()
+        {
+            foreach (Control c in form1.background2_pb.Controls)
+            {
+                if (c is PictureBox)
+                {
+                    c.Dispose();
+                }
+            }
+        }
+        // remove duplicate pics boxes
+        
     }
 }

@@ -121,8 +121,14 @@
   <data name="attend" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\attend.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bbq" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bbq.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="backbutton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backbutton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nintendobg1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nintendobg1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="disneybg3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\disneybg3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="reading" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\reading.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -130,11 +136,17 @@
   <data name="campingbg1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\campingbg1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="presentation" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\presentation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="classroombg2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\classroombg2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="super-mario" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\super-mario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cliford1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cliford1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="settings-3110" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settings-3110.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bbq" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bbq.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="theater-icon-29501" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\theater-icon-29501.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,20 +169,23 @@
   <data name="tent" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="spaceship" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spaceship.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="exit_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exit_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="disneyland" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\disneyland.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="campingbg3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\campingbg3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sb" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sb.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="youtube" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\youtube.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="clipart240181" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\clipart240181.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="classroombg3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\classroombg3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="campingbg2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\campingbg2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,20 +193,41 @@
   <data name="hacky-sack" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hacky-sack.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="spaceship" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\spaceship.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="nintendobg2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nintendobg2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="favpng_icon-question" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\favpng_icon-question.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="disneybg1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\disneybg1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="super-mario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\super-mario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="clipart240181" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\clipart240181.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="classroombg1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\classroombg1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="presentation1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\presentation1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="disneybg2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\disneybg2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cliford" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cliford.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="exit_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\exit_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sb.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="settings-3110" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\settings-3110.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="favpng_icon-question" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\favpng_icon-question.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="presentation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\presentation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nintendobg3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nintendobg3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PngItem_174701 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PngItem_174701 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,7 +238,13 @@
   <data name="youtube1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\youtube1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="backbutton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\backbutton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pbskidsbg1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pbskidsbg1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pbskidsbg2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pbskidsbg2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pbskidsbg3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pbskidsbg3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
