@@ -25,6 +25,7 @@ namespace Circle_Time
         bool studentPhotosUpdated = false;
         bool teacherPhotosLoaded = false;
         bool teacherPhotosUpdated = false;
+        bool firststart;
         public Form1()
         {
             InitializeComponent();
@@ -58,7 +59,8 @@ namespace Circle_Time
         /// <param name="e"></param>
         private void Form1_Load(object sender, EventArgs e)
         {
-         
+            // check if this is the first time the application has been run
+
         }
         /*---------------------------------------
          * 

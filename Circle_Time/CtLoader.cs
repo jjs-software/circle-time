@@ -11,6 +11,7 @@ namespace Circle_Time
 {
     internal class CtLoader
     {     
+        
         // vars
         Form1 form1 = (Form1)System.Windows.Forms.Application.OpenForms["Form1"];
         string directory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
@@ -20,6 +21,11 @@ namespace Circle_Time
             public void LoadStudentPhotos(int index)
         {
             PictureBox[] pics = new PictureBox[6];
+            // check if file student.txt exists if not create a blank text file
+            if (!File.Exists(directory + folderName + @"\students.txt"))
+            {
+                File.Create(directory + folderName + @"\students.txt");
+            }
             string path = @"students.txt";
             string filelocation = directory + folderName;
             List<string> allLinesText = File.ReadAllLines(filelocation + @"\" + path).ToList();
@@ -77,6 +83,11 @@ namespace Circle_Time
             PictureBox[] pics = new PictureBox[6];
             string path = @"teachers.txt";
             string filelocation = directory + folderName;
+            // check if file exist if not create a blank text file
+            if (!File.Exists(directory + folderName + @"\teachers.txt"))
+            {
+                File.Create(directory + folderName + @"\teachers.txt");
+            }
             List<string> allLinesText2 = File.ReadAllLines(filelocation + @"\" + path).ToList();
 
             foreach (var item in allLinesText2)
@@ -135,8 +146,14 @@ namespace Circle_Time
                     c.Dispose();
                 }
             }
+            foreach (Control c in form1.background3_pb.Controls)
+            {
+                if (c is PictureBox)
+                {
+                    c.Dispose();
+                }
+            }
         }
-        // remove duplicate pics boxes
         
     }
 }
