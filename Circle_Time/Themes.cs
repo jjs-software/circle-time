@@ -350,7 +350,69 @@ namespace Circle_Time
             changebg3(sb3);
         }
 
+        /// <summary>
+        ///  Theater Theme
+        /// </summary>
+        public void loadTheatertheme()
+        {
+            // load theater theme
+            //load spongebob theme
+            currentTheme = "theater";
+            CtLoader ct = new CtLoader();
+            ct.DestroyPicBoxes();
 
+            // check if pictures are already loaded.
+            if (loaded == false)
+            {
+                LoadPictures();
+            }
+            else
+            {
+                loaded = true;
+            }
+            // show the panels 
+            showPanels(true);
+            // Now load the 3 Background Images 
+            //bg1
+            Bitmap tt1 = new Bitmap(Properties.Resources.theaterbg1);
+            changebg1(tt1);
+            //bg2
+            Bitmap tt2 = new Bitmap(Properties.Resources.theaterbg2);
+            changebg2(tt2);
+            //bg3
+            Bitmap tt3 = new Bitmap(Properties.Resources.theaterbg3);
+            changebg3(tt3);
+        }
+
+        public void load80stheme()
+        {
+            // load 80s theme
+            currentTheme = "80s";
+            CtLoader ct = new CtLoader();
+            ct.DestroyPicBoxes();
+
+            // check if pictures are already loaded.
+            if (loaded == false)
+            {
+                LoadPictures();
+            }
+            else
+            {
+                loaded = true;
+            }
+            // show the panels 
+            showPanels(true);
+            // Now load the 3 Background Images 
+            //bg1
+            Bitmap tes1 = new Bitmap(Properties.Resources._80sbg1);
+            changebg1(tes1);
+            //bg2
+            Bitmap tes2 = new Bitmap(Properties.Resources._80sbg2);
+            changebg2(tes2);
+            //bg3
+            Bitmap tes3= new Bitmap(Properties.Resources._80sbg3);
+            changebg3(tes3);
+        }
         private void LoadPictures()
         {
 

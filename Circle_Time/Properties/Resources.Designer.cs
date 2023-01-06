@@ -73,6 +73,36 @@ namespace Circle_Time.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _80sbg1 {
+            get {
+                object obj = ResourceManager.GetObject("80sbg1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _80sbg2 {
+            get {
+                object obj = ResourceManager.GetObject("80sbg2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _80sbg3 {
+            get {
+                object obj = ResourceManager.GetObject("80sbg3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap attend {
             get {
                 object obj = ResourceManager.GetObject("attend", resourceCulture);
@@ -586,6 +616,36 @@ namespace Circle_Time.Properties {
         internal static System.Drawing.Bitmap theater_icon_29501 {
             get {
                 object obj = ResourceManager.GetObject("theater-icon-29501", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap theaterbg1 {
+            get {
+                object obj = ResourceManager.GetObject("theaterbg1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap theaterbg2 {
+            get {
+                object obj = ResourceManager.GetObject("theaterbg2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap theaterbg3 {
+            get {
+                object obj = ResourceManager.GetObject("theaterbg3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

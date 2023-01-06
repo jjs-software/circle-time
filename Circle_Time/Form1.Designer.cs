@@ -82,6 +82,8 @@ namespace Circle_Time
             this.safariToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.spaceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.spongebobToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.theaterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.youTubeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -143,7 +145,9 @@ namespace Circle_Time
             this.pBSKidsToolStripMenuItem,
             this.safariToolStripMenuItem,
             this.spaceToolStripMenuItem,
-            this.spongebobToolStripMenuItem});
+            this.spongebobToolStripMenuItem,
+            this.theaterToolStripMenuItem,
+            this.sToolStripMenuItem});
             this.themesToolStripMenuItem.Name = "themesToolStripMenuItem";
             this.themesToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.themesToolStripMenuItem.Text = "Themes";
@@ -563,7 +567,7 @@ namespace Circle_Time
             // 
             this.campingToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.tent;
             this.campingToolStripMenuItem.Name = "campingToolStripMenuItem";
-            this.campingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.campingToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.campingToolStripMenuItem.Text = "Camping";
             this.campingToolStripMenuItem.Click += new System.EventHandler(this.campingToolStripMenuItem_Click);
             // 
@@ -571,7 +575,7 @@ namespace Circle_Time
             // 
             this.classroomToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.presentation1;
             this.classroomToolStripMenuItem.Name = "classroomToolStripMenuItem";
-            this.classroomToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.classroomToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.classroomToolStripMenuItem.Text = "Classroom";
             this.classroomToolStripMenuItem.Click += new System.EventHandler(this.classroomToolStripMenuItem_Click);
             // 
@@ -579,7 +583,7 @@ namespace Circle_Time
             // 
             this.disneyToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.disneyland;
             this.disneyToolStripMenuItem.Name = "disneyToolStripMenuItem";
-            this.disneyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.disneyToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.disneyToolStripMenuItem.Text = "Disney";
             this.disneyToolStripMenuItem.Click += new System.EventHandler(this.disneyToolStripMenuItem_Click);
             // 
@@ -587,7 +591,7 @@ namespace Circle_Time
             // 
             this.nintendoToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.super_mario;
             this.nintendoToolStripMenuItem.Name = "nintendoToolStripMenuItem";
-            this.nintendoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nintendoToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.nintendoToolStripMenuItem.Text = "Nintendo";
             this.nintendoToolStripMenuItem.Click += new System.EventHandler(this.nintendoToolStripMenuItem_Click);
             // 
@@ -595,7 +599,7 @@ namespace Circle_Time
             // 
             this.pBSKidsToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.cliford1;
             this.pBSKidsToolStripMenuItem.Name = "pBSKidsToolStripMenuItem";
-            this.pBSKidsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pBSKidsToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.pBSKidsToolStripMenuItem.Text = "PBS Kids";
             this.pBSKidsToolStripMenuItem.Click += new System.EventHandler(this.pBSKidsToolStripMenuItem_Click);
             // 
@@ -603,7 +607,7 @@ namespace Circle_Time
             // 
             this.safariToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.clipart2401811;
             this.safariToolStripMenuItem.Name = "safariToolStripMenuItem";
-            this.safariToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.safariToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.safariToolStripMenuItem.Text = "Safari";
             this.safariToolStripMenuItem.Click += new System.EventHandler(this.safariToolStripMenuItem_Click);
             // 
@@ -611,7 +615,7 @@ namespace Circle_Time
             // 
             this.spaceToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.spaceship1;
             this.spaceToolStripMenuItem.Name = "spaceToolStripMenuItem";
-            this.spaceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.spaceToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.spaceToolStripMenuItem.Text = "Space";
             this.spaceToolStripMenuItem.Click += new System.EventHandler(this.spaceToolStripMenuItem_Click);
             // 
@@ -619,9 +623,25 @@ namespace Circle_Time
             // 
             this.spongebobToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.spongebob_png_442261;
             this.spongebobToolStripMenuItem.Name = "spongebobToolStripMenuItem";
-            this.spongebobToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.spongebobToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.spongebobToolStripMenuItem.Text = "Spongebob";
             this.spongebobToolStripMenuItem.Click += new System.EventHandler(this.spongebobToolStripMenuItem_Click);
+            // 
+            // theaterToolStripMenuItem
+            // 
+            this.theaterToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.theater_icon_29501;
+            this.theaterToolStripMenuItem.Name = "theaterToolStripMenuItem";
+            this.theaterToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.theaterToolStripMenuItem.Text = "Theater";
+            this.theaterToolStripMenuItem.Click += new System.EventHandler(this.theaterToolStripMenuItem_Click);
+            // 
+            // sToolStripMenuItem
+            // 
+            this.sToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.PngItem_174701__1_;
+            this.sToolStripMenuItem.Name = "sToolStripMenuItem";
+            this.sToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.sToolStripMenuItem.Text = "1980s";
+            this.sToolStripMenuItem.Click += new System.EventHandler(this.sToolStripMenuItem_Click);
             // 
             // youTubeToolStripMenuItem
             // 
@@ -735,6 +755,8 @@ namespace Circle_Time
         private ToolStripMenuItem safariToolStripMenuItem;
         private ToolStripMenuItem spaceToolStripMenuItem;
         private ToolStripMenuItem spongebobToolStripMenuItem;
+        private ToolStripMenuItem theaterToolStripMenuItem;
+        private ToolStripMenuItem sToolStripMenuItem;
     }
 }
 

@@ -484,6 +484,93 @@ namespace Circle_Time
             label6.Font = new Font(label6.Font, FontStyle.Bold);
         }
 
+        /// <summary>
+        ///  Theme menu ----> Theater
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void theaterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // load theater theme
+            Themes themes = new Themes();
+            themes.currentTheme = "theater";
+            themes.loadTheatertheme();
+            // Hide Notice Label
+            notice_lbl.Visible = false;
+            // To prevent creating duplicate tabpages
+            if (!tabControl1.TabPages.Contains(tabPage2))
+            {
+                tabControl1.TabPages.Add(tabPage2);
+            }
+            if (!tabControl1.TabPages.Contains(tabPage3))
+            {
+                tabControl1.TabPages.Add(tabPage3);
+            }
+            // change panel colors 
+            makechoice_panel.BackColor = Color.FromArgb(197,155,139);
+          whoshere_panel.BackColor = Color.FromArgb(197, 155, 139);
+            helloteachers_panel.BackColor = Color.FromArgb(197, 155, 139);
+            movement_panel.BackColor = Color.FromArgb(197, 155, 139);
+            readbook_panel.BackColor = Color.FromArgb(197, 155, 139);
+            questions_panel.BackColor = Color.FromArgb(197, 155, 139);
+            // change the font style to bold for label1
+            label1.ForeColor = Color.FromArgb(255, 248, 178);
+            label1.Font = new Font(label1.Font, FontStyle.Bold);
+            label2.ForeColor = Color.FromArgb(255, 248, 178);
+            label2.Font = new Font(label2.Font, FontStyle.Bold);
+            label3.ForeColor = Color.FromArgb(255, 248, 178);
+            label3.Font = new Font(label3.Font, FontStyle.Bold);
+            label4.ForeColor = Color.FromArgb(255, 248, 178);
+            label4.Font = new Font(label4.Font, FontStyle.Bold);
+            label5.ForeColor = Color.FromArgb(255, 248, 178);
+            label5.Font = new Font(label5.Font, FontStyle.Bold);
+            label6.ForeColor = Color.FromArgb(255, 248, 178);
+            label6.Font = new Font(label6.Font, FontStyle.Bold);
+        }
+
+        /// <summary>
+        ///  THeme menu ---> 1980s
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void sToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // load theater theme
+            Themes themes = new Themes();
+            themes.currentTheme = "1980s";
+            themes.load80stheme();
+            // Hide Notice Label
+            notice_lbl.Visible = false;
+            // To prevent creating duplicate tabpages
+            if (!tabControl1.TabPages.Contains(tabPage2))
+            {
+                tabControl1.TabPages.Add(tabPage2);
+            }
+            if (!tabControl1.TabPages.Contains(tabPage3))
+            {
+                tabControl1.TabPages.Add(tabPage3);
+            }
+            // change the background on the panels 
+            makechoice_panel.BackColor = Color.FromArgb(85, 29, 88);
+            whoshere_panel.BackColor = Color.FromArgb(85, 29, 88);
+            helloteachers_panel.BackColor = Color.FromArgb(85, 29, 88);
+            movement_panel.BackColor = Color.FromArgb(85, 29, 88);
+            readbook_panel.BackColor = Color.FromArgb(85, 29, 88);
+            questions_panel.BackColor = Color.FromArgb(85, 29, 88);
+            // change the font style to bold for label1
+            label1.ForeColor = Color.FromArgb(229, 165, 78);
+            label1.Font = new Font(label1.Font, FontStyle.Bold);
+            label2.ForeColor = Color.FromArgb(229, 165, 78);
+            label2.Font = new Font(label2.Font, FontStyle.Bold);
+            label3.ForeColor = Color.FromArgb(229, 165, 78);
+            label3.Font = new Font(label3.Font, FontStyle.Bold);
+            label4.ForeColor = Color.FromArgb(229, 165, 78);
+            label4.Font = new Font(label4.Font, FontStyle.Bold);
+            label5.ForeColor = Color.FromArgb(229, 165, 78);
+            label5.Font = new Font(label5.Font, FontStyle.Bold);
+            label6.ForeColor = Color.FromArgb(229, 165, 78);
+            label6.Font = new Font(label6.Font, FontStyle.Bold);
+        }
         /// ======================================
         ///   
         ///           Animated Icons 
