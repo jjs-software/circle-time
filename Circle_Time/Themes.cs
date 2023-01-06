@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -249,7 +250,107 @@ namespace Circle_Time
             Bitmap p3 = new Bitmap(Properties.Resources.pbskidsbg3);
             changebg3(p3);
         }
+
+        /// <summary>
+        ///  Safari Theme
+        /// </summary>
+        public void loadSafaritheme()
+        {
+            currentTheme = "Safari";
+            CtLoader ct = new CtLoader();
+            ct.DestroyPicBoxes();
+
+            // check if pictures are already loaded.
+            if (loaded == false)
+            {
+                LoadPictures();
+            }
+            else
+            {
+                loaded = true;
+            }
+            // show the panels 
+            showPanels(true);
+            // Now load the 3 Background Images 
+            //bg1
+            Bitmap s1 = new Bitmap(Properties.Resources.safaribg1);
+            changebg1(s1);
+            //bg2
+            Bitmap s2 = new Bitmap(Properties.Resources.safaribg2);
+            changebg2(s2);
+            //bg3
+            Bitmap s3 = new Bitmap(Properties.Resources.safaribg3);
+            changebg3(s3);
+            
+        }
+        
+       /// <summary>
+       ///  Space Theme
+       /// </summary>
+        public void loadSpacetheme()
+        {
+            currentTheme = "Space";
+            CtLoader ct = new CtLoader();
+            ct.DestroyPicBoxes();
+
+            // check if pictures are already loaded.
+            if (loaded == false)
+            {
+                LoadPictures();
+            }
+            else
+            {
+                loaded = true;
+            }
+            // show the panels 
+            showPanels(true);
+            // Now load the 3 Background Images 
+            //bg1
+            Bitmap s1 = new Bitmap(Properties.Resources.spacebg1);
+            changebg1(s1);
+            //bg2
+            Bitmap s2 = new Bitmap(Properties.Resources.spacebg2);
+            changebg2(s2);
+            //bg3
+            Bitmap s3 = new Bitmap(Properties.Resources.spacebg3);
+            changebg3(s3);
+        }
+
+        /// <summary>
+        ///  Spongebob theme
+        /// </summary>
         // Load Student & Teachers Photos
+        public void loadSpongebobtheme()
+        {
+            //load spongebob theme
+            currentTheme = "spongebob";
+            CtLoader ct = new CtLoader();
+            ct.DestroyPicBoxes();
+
+            // check if pictures are already loaded.
+            if (loaded == false)
+            {
+                LoadPictures();
+            }
+            else
+            {
+                loaded = true;
+            }
+            // show the panels 
+            showPanels(true);
+            // Now load the 3 Background Images 
+            //bg1
+            Bitmap sb1 = new Bitmap(Properties.Resources.spongebobbg1);
+            changebg1(sb1);
+            //bg2
+            Bitmap sb2 = new Bitmap(Properties.Resources.spongebobbg2);
+            changebg2(sb2);
+            //bg3
+            Bitmap sb3 = new Bitmap(Properties.Resources.spongebobbg3);
+            changebg3(sb3);
+        }
+
+
         private void LoadPictures()
         {
 

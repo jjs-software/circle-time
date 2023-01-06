@@ -193,6 +193,16 @@ namespace Circle_Time.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap clipart2401811 {
+            get {
+                object obj = ResourceManager.GetObject("clipart2401811", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap disneybg1 {
             get {
                 object obj = ResourceManager.GetObject("disneybg1", resourceCulture);
@@ -403,6 +413,36 @@ namespace Circle_Time.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap safaribg1 {
+            get {
+                object obj = ResourceManager.GetObject("safaribg1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap safaribg2 {
+            get {
+                object obj = ResourceManager.GetObject("safaribg2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap safaribg3 {
+            get {
+                object obj = ResourceManager.GetObject("safaribg3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sb {
             get {
                 object obj = ResourceManager.GetObject("sb", resourceCulture);
@@ -423,6 +463,36 @@ namespace Circle_Time.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap spacebg1 {
+            get {
+                object obj = ResourceManager.GetObject("spacebg1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spacebg2 {
+            get {
+                object obj = ResourceManager.GetObject("spacebg2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spacebg3 {
+            get {
+                object obj = ResourceManager.GetObject("spacebg3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap spaceship {
             get {
                 object obj = ResourceManager.GetObject("spaceship", resourceCulture);
@@ -433,9 +503,59 @@ namespace Circle_Time.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap spaceship1 {
+            get {
+                object obj = ResourceManager.GetObject("spaceship1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap spongebob_png_44226 {
             get {
                 object obj = ResourceManager.GetObject("spongebob-png-44226", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spongebob_png_442261 {
+            get {
+                object obj = ResourceManager.GetObject("spongebob-png-442261", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spongebobbg1 {
+            get {
+                object obj = ResourceManager.GetObject("spongebobbg1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spongebobbg2 {
+            get {
+                object obj = ResourceManager.GetObject("spongebobbg2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spongebobbg3 {
+            get {
+                object obj = ResourceManager.GetObject("spongebobbg3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -274,5 +274,44 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipart2401811.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\safaribg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\safaribg2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\safaribg3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spaceship1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spacebg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spacebg2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spacebg3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spongebob-png-442261.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spongebobbg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spongebobbg3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spongebobbg2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spongebobbg21.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

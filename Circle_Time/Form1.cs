@@ -59,7 +59,7 @@ namespace Circle_Time
         /// <param name="e"></param>
         private void Form1_Load(object sender, EventArgs e)
         {
-            // check if this is the first time the application has been run
+            // first time program has been run 
 
         }
         /*---------------------------------------
@@ -351,7 +351,139 @@ namespace Circle_Time
             label6.ForeColor = Color.WhiteSmoke;
             label6.Font = new Font(label6.Font, FontStyle.Bold);
         }
+
+        /// <summary>
+        ///  Theme Menu ---> Safari Theme
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void safariToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // first load the theme
+            Themes themes = new Themes();
+            themes.currentTheme = "safari";
+            themes.loadSafaritheme();
+            // Hide Notice Label
+            notice_lbl.Visible = false;
+            // To prevent creating duplicate tabpages
+            if (!tabControl1.TabPages.Contains(tabPage2))
+            {
+                tabControl1.TabPages.Add(tabPage2);
+            }
+            if (!tabControl1.TabPages.Contains(tabPage3))
+            {
+                tabControl1.TabPages.Add(tabPage3);
+            }
+            // change the background on the panels 
+            makechoice_panel.BackColor = Color.FromArgb(243, 218, 117);
+            whoshere_panel.BackColor = Color.FromArgb(243, 218, 117);
+            helloteachers_panel.BackColor = Color.FromArgb(243, 218, 117);
+            movement_panel.BackColor = Color.FromArgb(243, 218, 117); 
+            readbook_panel.BackColor = Color.FromArgb(243, 218, 117);
+            questions_panel.BackColor = Color.FromArgb(243, 218, 117);
+            // change the font style to bold for label1
+            label1.ForeColor = Color.FromArgb(96, 43, 39);
+            label1.Font = new Font(label1.Font, FontStyle.Bold);
+            label2.ForeColor = Color.FromArgb(96, 43, 39);
+            label2.Font = new Font(label2.Font, FontStyle.Bold);
+            label3.ForeColor = Color.FromArgb(96, 43, 39);
+            label3.Font = new Font(label3.Font, FontStyle.Bold);
+            label4.ForeColor = Color.FromArgb(96, 43, 39);
+            label4.Font = new Font(label4.Font, FontStyle.Bold);
+            label5.ForeColor = Color.FromArgb(96, 43, 39);
+            label5.Font = new Font(label5.Font, FontStyle.Bold);
+            label6.ForeColor = Color.FromArgb(96, 43, 39);
+            label6.Font = new Font(label6.Font, FontStyle.Bold);
+        }
         
+        
+        /// <summary>
+        ///  Theme Menu ---> Space theme
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void spaceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // space theme
+            Themes themes = new Themes();
+            themes.currentTheme = "space";
+            themes.loadSpacetheme();
+            // Hide Notice Label
+            notice_lbl.Visible = false;
+            // To prevent creating duplicate tabpages
+            if (!tabControl1.TabPages.Contains(tabPage2))
+            {
+                tabControl1.TabPages.Add(tabPage2);
+            }
+            if (!tabControl1.TabPages.Contains(tabPage3))
+            {
+                tabControl1.TabPages.Add(tabPage3);
+            }
+            // change the background on the panels 
+            makechoice_panel.BackColor = Color.FromArgb(243, 218, 117);
+            whoshere_panel.BackColor = Color.FromArgb(243, 218, 117);
+            helloteachers_panel.BackColor = Color.FromArgb(243, 218, 117);
+            movement_panel.BackColor = Color.FromArgb(243, 218, 117);
+            readbook_panel.BackColor = Color.FromArgb(243, 218, 117);
+            questions_panel.BackColor = Color.FromArgb(243, 218, 117);
+            // change the font style to bold for label1
+            label1.ForeColor = Color.Red;
+            label1.Font = new Font(label1.Font, FontStyle.Bold);
+            label2.ForeColor = Color.Red;
+            label2.Font = new Font(label2.Font, FontStyle.Bold);
+            label3.ForeColor = Color.Red; ;
+            label3.Font = new Font(label3.Font, FontStyle.Bold);
+            label4.ForeColor = Color.Red;
+            label4.Font = new Font(label4.Font, FontStyle.Bold);
+            label5.ForeColor = Color.Red;
+            label5.Font = new Font(label5.Font, FontStyle.Bold);
+            label6.ForeColor = Color.Red;
+            label6.Font = new Font(label6.Font, FontStyle.Bold);
+        }
+        /// <summary>
+        ///  Theme Menu ----> SpongeBob
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void spongebobToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //load spongebob theme
+            Themes themes = new Themes();
+            themes.currentTheme = "spongebob";
+            themes.loadSpongebobtheme();
+            // Hide Notice Label
+            notice_lbl.Visible = false;
+            // To prevent creating duplicate tabpages
+            if (!tabControl1.TabPages.Contains(tabPage2))
+            {
+                tabControl1.TabPages.Add(tabPage2);
+            }
+            if (!tabControl1.TabPages.Contains(tabPage3))
+            {
+                tabControl1.TabPages.Add(tabPage3);
+            }
+            // change the background on the panels 
+            makechoice_panel.BackColor = Color.FromArgb(94, 205, 232);
+            whoshere_panel.BackColor = Color.FromArgb(94, 205, 232);
+            helloteachers_panel.BackColor = Color.FromArgb(94, 205, 232);
+            movement_panel.BackColor = Color.FromArgb(94, 205, 232);
+            readbook_panel.BackColor = Color.FromArgb(94, 205, 232);
+            questions_panel.BackColor = Color.FromArgb(94, 205, 232);
+            // change the font style to bold for label1
+            label1.ForeColor = Color.FromArgb(255, 248, 178);
+            label1.Font = new Font(label1.Font, FontStyle.Bold);
+            label2.ForeColor = Color.FromArgb(255, 248, 178);
+            label2.Font = new Font(label2.Font, FontStyle.Bold);
+            label3.ForeColor = Color.FromArgb(255, 248, 178);
+            label3.Font = new Font(label3.Font, FontStyle.Bold);
+            label4.ForeColor = Color.FromArgb(255, 248, 178);
+            label4.Font = new Font(label4.Font, FontStyle.Bold);
+            label5.ForeColor = Color.FromArgb(255, 248, 178);
+            label5.Font = new Font(label5.Font, FontStyle.Bold);
+            label6.ForeColor = Color.FromArgb(255, 248, 178);
+            label6.Font = new Font(label6.Font, FontStyle.Bold);
+        }
+
         /// ======================================
         ///   
         ///           Animated Icons 
