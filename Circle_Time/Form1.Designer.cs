@@ -37,7 +37,6 @@ namespace Circle_Time
             this.circleTimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closingCircleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.resetSchdeuleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.resetScheduleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.themesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -134,7 +133,6 @@ namespace Circle_Time
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.circleTimeToolStripMenuItem,
-            this.resetScheduleToolStripMenuItem,
             this.settingsToolStripMenuItem,
             this.quitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
@@ -164,13 +162,6 @@ namespace Circle_Time
             this.resetSchdeuleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.resetSchdeuleToolStripMenuItem.Text = "Reset Schdeule";
             this.resetSchdeuleToolStripMenuItem.Click += new System.EventHandler(this.resetSchdeuleToolStripMenuItem_Click);
-            // 
-            // resetScheduleToolStripMenuItem
-            // 
-            this.resetScheduleToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.reset;
-            this.resetScheduleToolStripMenuItem.Name = "resetScheduleToolStripMenuItem";
-            this.resetScheduleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.resetScheduleToolStripMenuItem.Text = "Reset Schedule";
             // 
             // settingsToolStripMenuItem
             // 
@@ -427,7 +418,7 @@ namespace Circle_Time
             this.questions_panel.Controls.Add(this.label6);
             this.questions_panel.Location = new System.Drawing.Point(755, 497);
             this.questions_panel.Name = "questions_panel";
-            this.questions_panel.Size = new System.Drawing.Size(234, 54);
+            this.questions_panel.Size = new System.Drawing.Size(234, 64);
             this.questions_panel.TabIndex = 12;
             this.questions_panel.Visible = false;
             // 
@@ -460,7 +451,7 @@ namespace Circle_Time
             this.movement_panel.Controls.Add(this.label5);
             this.movement_panel.Location = new System.Drawing.Point(755, 428);
             this.movement_panel.Name = "movement_panel";
-            this.movement_panel.Size = new System.Drawing.Size(234, 54);
+            this.movement_panel.Size = new System.Drawing.Size(234, 64);
             this.movement_panel.TabIndex = 11;
             this.movement_panel.Visible = false;
             // 
@@ -493,7 +484,7 @@ namespace Circle_Time
             this.readbook_panel.Controls.Add(this.label4);
             this.readbook_panel.Location = new System.Drawing.Point(755, 358);
             this.readbook_panel.Name = "readbook_panel";
-            this.readbook_panel.Size = new System.Drawing.Size(234, 54);
+            this.readbook_panel.Size = new System.Drawing.Size(234, 64);
             this.readbook_panel.TabIndex = 10;
             this.readbook_panel.Visible = false;
             // 
@@ -526,7 +517,7 @@ namespace Circle_Time
             this.helloteachers_panel.Controls.Add(this.label3);
             this.helloteachers_panel.Location = new System.Drawing.Point(755, 284);
             this.helloteachers_panel.Name = "helloteachers_panel";
-            this.helloteachers_panel.Size = new System.Drawing.Size(234, 54);
+            this.helloteachers_panel.Size = new System.Drawing.Size(234, 64);
             this.helloteachers_panel.TabIndex = 9;
             this.helloteachers_panel.Visible = false;
             // 
@@ -559,7 +550,7 @@ namespace Circle_Time
             this.whoshere_panel.Controls.Add(this.label2);
             this.whoshere_panel.Location = new System.Drawing.Point(755, 215);
             this.whoshere_panel.Name = "whoshere_panel";
-            this.whoshere_panel.Size = new System.Drawing.Size(234, 54);
+            this.whoshere_panel.Size = new System.Drawing.Size(234, 64);
             this.whoshere_panel.TabIndex = 8;
             this.whoshere_panel.Visible = false;
             // 
@@ -592,7 +583,7 @@ namespace Circle_Time
             this.makechoice_panel.Controls.Add(this.label1);
             this.makechoice_panel.Location = new System.Drawing.Point(755, 145);
             this.makechoice_panel.Name = "makechoice_panel";
-            this.makechoice_panel.Size = new System.Drawing.Size(234, 54);
+            this.makechoice_panel.Size = new System.Drawing.Size(234, 64);
             this.makechoice_panel.TabIndex = 7;
             this.makechoice_panel.Visible = false;
             // 
@@ -750,7 +741,6 @@ namespace Circle_Time
 
         #endregion
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem resetScheduleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem themesToolStripMenuItem;
