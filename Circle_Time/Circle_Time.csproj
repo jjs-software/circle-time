@@ -70,6 +70,10 @@
     <Reference Include="AC.ExtendedRenderer.Toolkit">
       <HintPath>..\..\..\Lib_4.4.0.1\AC.ExtendedRenderer.Toolkit.dll</HintPath>
     </Reference>
+    <Reference Include="ComponentFactory.Krypton.Toolkit, Version=4.3.2.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Lib_4.4.0.1\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -85,6 +89,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="admin.cs" />
+    <Compile Include="closing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="closing.Designer.cs">
+      <DependentUpon>closing.cs</DependentUpon>
+    </Compile>
     <Compile Include="controlext.cs" />
     <Compile Include="CtLoader.cs" />
     <Compile Include="Form1.cs">
@@ -114,6 +124,9 @@
       <DependentUpon>Youtube.cs</DependentUpon>
     </Compile>
     <Compile Include="ytclass.cs" />
+    <EmbeddedResource Include="closing.resx">
+      <DependentUpon>closing.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -340,6 +353,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="cooperation-png-10342-Windows.ico" />
+    <None Include="Resources\morning-icon.png" />
+    <None Include="Resources\goodbye.PNG" />
+    <None Include="Resources\vacum.PNG" />
+    <None Include="Resources\closingbg1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

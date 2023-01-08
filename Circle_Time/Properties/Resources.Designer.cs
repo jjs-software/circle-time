@@ -233,6 +233,16 @@ namespace Circle_Time.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap closingbg1 {
+            get {
+                object obj = ResourceManager.GetObject("closingbg1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap disneybg1 {
             get {
                 object obj = ResourceManager.GetObject("disneybg1", resourceCulture);
@@ -293,6 +303,16 @@ namespace Circle_Time.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap goodbye {
+            get {
+                object obj = ResourceManager.GetObject("goodbye", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hacky_sack {
             get {
                 object obj = ResourceManager.GetObject("hacky-sack", resourceCulture);
@@ -306,6 +326,16 @@ namespace Circle_Time.Properties {
         internal static System.Drawing.Bitmap Hello2 {
             get {
                 object obj = ResourceManager.GetObject("Hello2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap morning_icon {
+            get {
+                object obj = ResourceManager.GetObject("morning-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -646,6 +676,16 @@ namespace Circle_Time.Properties {
         internal static System.Drawing.Bitmap theaterbg3 {
             get {
                 object obj = ResourceManager.GetObject("theaterbg3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vacum {
+            get {
+                object obj = ResourceManager.GetObject("vacum", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

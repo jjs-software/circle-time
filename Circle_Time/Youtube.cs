@@ -39,11 +39,38 @@ namespace Circle_Time
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void goBackCloseToolStripMenuItem_Click(object sender, EventArgs e)
+        /// 
+        /// Go Back to morning Circle 
+        private void morningCircleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form1 f1 = (Form1)Application.OpenForms["Form1"];
             f1.Show();
             Hide();
+        }
+        /// <summary>
+        ///  Go Back to Closing Circle
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void closingCircleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // check if the form is already open
+            if (Application.OpenForms.OfType<closing>().Count() == 1)
+            {
+                closing f2 = (closing)Application.OpenForms["closing"];
+                f2.Show();
+                Hide();
+            }
+            else
+            {
+                closing f2 = new closing();
+                f2.Show();
+                Hide();
+            }
+        }
+        private void goBackCloseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           // do nothing 
         }
 
         // FORM CLOSE VIA CONTROLBOX
@@ -581,5 +608,6 @@ private void pb1_Click(object sender, EventArgs e)
             }
         }
 
+       
     }
 }

@@ -69,6 +69,17 @@ namespace Circle_Time
          */
 
         /// <summary>
+        ///  File Menu: Circle Time --> Closing Circle 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void closingCircleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            closing closing = new closing();
+            closing.Show();
+            Hide();
+        }
+        /// <summary>
         ///  File Menu: Circle Time  - > Reset Schedule
         /// </summary>
         /// <param name="sender"></param>
@@ -711,6 +722,8 @@ namespace Circle_Time
                 tabControl1.TabPages.Add(tabPage2);
                 tabControl1.SelectedTab = this.tabPage2;
             }            
-        }       
+        }
+
+       
     } // class .
 } // method 
