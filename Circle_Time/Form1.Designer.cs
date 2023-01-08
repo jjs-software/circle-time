@@ -34,46 +34,13 @@ namespace Circle_Time
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.themesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.windowsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.tabControl1 = new AC.ExtendedRenderer.Navigator.KryptonTabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.notice_lbl = new System.Windows.Forms.Label();
-            this.questions_panel = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.movement_panel = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.readbook_panel = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.helloteachers_panel = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.whoshere_panel = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.makechoice_panel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.goback_lbl = new System.Windows.Forms.LinkLabel();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.goBack2_lbl = new System.Windows.Forms.LinkLabel();
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.icon3_pb = new System.Windows.Forms.PictureBox();
-            this.icon2_pb = new System.Windows.Forms.PictureBox();
-            this.icon1_pb = new System.Windows.Forms.PictureBox();
-            this.questions_pb = new System.Windows.Forms.PictureBox();
-            this.movement_pb = new System.Windows.Forms.PictureBox();
-            this.reading_pb = new System.Windows.Forms.PictureBox();
-            this.hiteacher_pb = new System.Windows.Forms.PictureBox();
-            this.whoshere_pb = new System.Windows.Forms.PictureBox();
-            this.mkchoice_pb = new System.Windows.Forms.PictureBox();
-            this.background_pb = new System.Windows.Forms.PictureBox();
-            this.background2_pb = new System.Windows.Forms.PictureBox();
-            this.background3_pb = new System.Windows.Forms.PictureBox();
+            this.circleTimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.closingCircleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.resetSchdeuleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.resetScheduleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.themesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.campingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.classroomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.disneyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -84,29 +51,67 @@ namespace Circle_Time
             this.spongebobToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.theaterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.windowsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.youTubeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutCircleTimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.tabControl1 = new AC.ExtendedRenderer.Navigator.KryptonTabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.icon3_pb = new System.Windows.Forms.PictureBox();
+            this.notice_lbl = new System.Windows.Forms.Label();
+            this.icon2_pb = new System.Windows.Forms.PictureBox();
+            this.icon1_pb = new System.Windows.Forms.PictureBox();
+            this.questions_panel = new System.Windows.Forms.Panel();
+            this.questions_pb = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.movement_panel = new System.Windows.Forms.Panel();
+            this.movement_pb = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.readbook_panel = new System.Windows.Forms.Panel();
+            this.reading_pb = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.helloteachers_panel = new System.Windows.Forms.Panel();
+            this.hiteacher_pb = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.whoshere_panel = new System.Windows.Forms.Panel();
+            this.whoshere_pb = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.makechoice_panel = new System.Windows.Forms.Panel();
+            this.mkchoice_pb = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.background_pb = new System.Windows.Forms.PictureBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.goback_lbl = new System.Windows.Forms.LinkLabel();
+            this.background2_pb = new System.Windows.Forms.PictureBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.goBack2_lbl = new System.Windows.Forms.LinkLabel();
+            this.background3_pb = new System.Windows.Forms.PictureBox();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.questions_panel.SuspendLayout();
-            this.movement_panel.SuspendLayout();
-            this.readbook_panel.SuspendLayout();
-            this.helloteachers_panel.SuspendLayout();
-            this.whoshere_panel.SuspendLayout();
-            this.makechoice_panel.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.icon3_pb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icon2_pb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icon1_pb)).BeginInit();
+            this.questions_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.questions_pb)).BeginInit();
+            this.movement_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.movement_pb)).BeginInit();
+            this.readbook_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reading_pb)).BeginInit();
+            this.helloteachers_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hiteacher_pb)).BeginInit();
+            this.whoshere_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.whoshere_pb)).BeginInit();
+            this.makechoice_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mkchoice_pb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.background_pb)).BeginInit();
+            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.background2_pb)).BeginInit();
+            this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.background3_pb)).BeginInit();
             this.SuspendLayout();
             // 
@@ -128,12 +133,60 @@ namespace Circle_Time
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.circleTimeToolStripMenuItem,
             this.resetScheduleToolStripMenuItem,
             this.settingsToolStripMenuItem,
             this.quitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
+            // 
+            // circleTimeToolStripMenuItem
+            // 
+            this.circleTimeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.closingCircleToolStripMenuItem,
+            this.resetSchdeuleToolStripMenuItem});
+            this.circleTimeToolStripMenuItem.Name = "circleTimeToolStripMenuItem";
+            this.circleTimeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.circleTimeToolStripMenuItem.Text = "Circle Time";
+            // 
+            // closingCircleToolStripMenuItem
+            // 
+            this.closingCircleToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.presentation;
+            this.closingCircleToolStripMenuItem.Name = "closingCircleToolStripMenuItem";
+            this.closingCircleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.closingCircleToolStripMenuItem.Text = "Closing Circle";
+            // 
+            // resetSchdeuleToolStripMenuItem
+            // 
+            this.resetSchdeuleToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.reset;
+            this.resetSchdeuleToolStripMenuItem.Name = "resetSchdeuleToolStripMenuItem";
+            this.resetSchdeuleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.resetSchdeuleToolStripMenuItem.Text = "Reset Schdeule";
+            this.resetSchdeuleToolStripMenuItem.Click += new System.EventHandler(this.resetSchdeuleToolStripMenuItem_Click);
+            // 
+            // resetScheduleToolStripMenuItem
+            // 
+            this.resetScheduleToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.reset;
+            this.resetScheduleToolStripMenuItem.Name = "resetScheduleToolStripMenuItem";
+            this.resetScheduleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.resetScheduleToolStripMenuItem.Text = "Reset Schedule";
+            // 
+            // settingsToolStripMenuItem
+            // 
+            this.settingsToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.settings_3110;
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.settingsToolStripMenuItem.Text = "Settings";
+            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
+            // 
+            // quitToolStripMenuItem
+            // 
+            this.quitToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.exit_icon;
+            this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.quitToolStripMenuItem.Text = "Quit";
+            this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
             // 
             // themesToolStripMenuItem
             // 
@@ -152,6 +205,86 @@ namespace Circle_Time
             this.themesToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.themesToolStripMenuItem.Text = "Themes";
             // 
+            // campingToolStripMenuItem
+            // 
+            this.campingToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.tent;
+            this.campingToolStripMenuItem.Name = "campingToolStripMenuItem";
+            this.campingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.campingToolStripMenuItem.Text = "Camping";
+            this.campingToolStripMenuItem.Click += new System.EventHandler(this.campingToolStripMenuItem_Click);
+            // 
+            // classroomToolStripMenuItem
+            // 
+            this.classroomToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.presentation1;
+            this.classroomToolStripMenuItem.Name = "classroomToolStripMenuItem";
+            this.classroomToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.classroomToolStripMenuItem.Text = "Classroom";
+            this.classroomToolStripMenuItem.Click += new System.EventHandler(this.classroomToolStripMenuItem_Click);
+            // 
+            // disneyToolStripMenuItem
+            // 
+            this.disneyToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.disneyland;
+            this.disneyToolStripMenuItem.Name = "disneyToolStripMenuItem";
+            this.disneyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.disneyToolStripMenuItem.Text = "Disney";
+            this.disneyToolStripMenuItem.Click += new System.EventHandler(this.disneyToolStripMenuItem_Click);
+            // 
+            // nintendoToolStripMenuItem
+            // 
+            this.nintendoToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.super_mario;
+            this.nintendoToolStripMenuItem.Name = "nintendoToolStripMenuItem";
+            this.nintendoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nintendoToolStripMenuItem.Text = "Nintendo";
+            this.nintendoToolStripMenuItem.Click += new System.EventHandler(this.nintendoToolStripMenuItem_Click);
+            // 
+            // pBSKidsToolStripMenuItem
+            // 
+            this.pBSKidsToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.cliford1;
+            this.pBSKidsToolStripMenuItem.Name = "pBSKidsToolStripMenuItem";
+            this.pBSKidsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pBSKidsToolStripMenuItem.Text = "PBS Kids";
+            this.pBSKidsToolStripMenuItem.Click += new System.EventHandler(this.pBSKidsToolStripMenuItem_Click);
+            // 
+            // safariToolStripMenuItem
+            // 
+            this.safariToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.clipart2401811;
+            this.safariToolStripMenuItem.Name = "safariToolStripMenuItem";
+            this.safariToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.safariToolStripMenuItem.Text = "Safari";
+            this.safariToolStripMenuItem.Click += new System.EventHandler(this.safariToolStripMenuItem_Click);
+            // 
+            // spaceToolStripMenuItem
+            // 
+            this.spaceToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.spaceship1;
+            this.spaceToolStripMenuItem.Name = "spaceToolStripMenuItem";
+            this.spaceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.spaceToolStripMenuItem.Text = "Space";
+            this.spaceToolStripMenuItem.Click += new System.EventHandler(this.spaceToolStripMenuItem_Click);
+            // 
+            // spongebobToolStripMenuItem
+            // 
+            this.spongebobToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.spongebob_png_442261;
+            this.spongebobToolStripMenuItem.Name = "spongebobToolStripMenuItem";
+            this.spongebobToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.spongebobToolStripMenuItem.Text = "Spongebob";
+            this.spongebobToolStripMenuItem.Click += new System.EventHandler(this.spongebobToolStripMenuItem_Click);
+            // 
+            // theaterToolStripMenuItem
+            // 
+            this.theaterToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.theater_icon_29501;
+            this.theaterToolStripMenuItem.Name = "theaterToolStripMenuItem";
+            this.theaterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.theaterToolStripMenuItem.Text = "Theater";
+            this.theaterToolStripMenuItem.Click += new System.EventHandler(this.theaterToolStripMenuItem_Click);
+            // 
+            // sToolStripMenuItem
+            // 
+            this.sToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.PngItem_174701__1_;
+            this.sToolStripMenuItem.Name = "sToolStripMenuItem";
+            this.sToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sToolStripMenuItem.Text = "1980s";
+            this.sToolStripMenuItem.Click += new System.EventHandler(this.sToolStripMenuItem_Click);
+            // 
             // windowsToolStripMenuItem
             // 
             this.windowsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -160,11 +293,35 @@ namespace Circle_Time
             this.windowsToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.windowsToolStripMenuItem.Text = "Windows";
             // 
+            // youTubeToolStripMenuItem
+            // 
+            this.youTubeToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.youtube;
+            this.youTubeToolStripMenuItem.Name = "youTubeToolStripMenuItem";
+            this.youTubeToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.youTubeToolStripMenuItem.Text = "YouTube";
+            this.youTubeToolStripMenuItem.Click += new System.EventHandler(this.youTubeToolStripMenuItem_Click);
+            // 
             // helpToolStripMenuItem
             // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewHelpToolStripMenuItem,
+            this.aboutCircleTimeToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
+            // 
+            // viewHelpToolStripMenuItem
+            // 
+            this.viewHelpToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.favpng_icon_question;
+            this.viewHelpToolStripMenuItem.Name = "viewHelpToolStripMenuItem";
+            this.viewHelpToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.viewHelpToolStripMenuItem.Text = "View help";
+            // 
+            // aboutCircleTimeToolStripMenuItem
+            // 
+            this.aboutCircleTimeToolStripMenuItem.Name = "aboutCircleTimeToolStripMenuItem";
+            this.aboutCircleTimeToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.aboutCircleTimeToolStripMenuItem.Text = "About Circle Time";
             // 
             // timer1
             // 
@@ -218,6 +375,17 @@ namespace Circle_Time
             this.tabPage1.Tag = false;
             this.tabPage1.Text = "Main";
             // 
+            // icon3_pb
+            // 
+            this.icon3_pb.BackColor = System.Drawing.Color.Transparent;
+            this.icon3_pb.Location = new System.Drawing.Point(1071, 38);
+            this.icon3_pb.Name = "icon3_pb";
+            this.icon3_pb.Size = new System.Drawing.Size(160, 120);
+            this.icon3_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.icon3_pb.TabIndex = 16;
+            this.icon3_pb.TabStop = false;
+            this.icon3_pb.Visible = false;
+            // 
             // notice_lbl
             // 
             this.notice_lbl.AutoSize = true;
@@ -227,6 +395,29 @@ namespace Circle_Time
             this.notice_lbl.Size = new System.Drawing.Size(377, 37);
             this.notice_lbl.TabIndex = 15;
             this.notice_lbl.Text = "Please first load a theme.";
+            // 
+            // icon2_pb
+            // 
+            this.icon2_pb.BackColor = System.Drawing.Color.Transparent;
+            this.icon2_pb.Location = new System.Drawing.Point(1037, 483);
+            this.icon2_pb.Name = "icon2_pb";
+            this.icon2_pb.Size = new System.Drawing.Size(181, 146);
+            this.icon2_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.icon2_pb.TabIndex = 14;
+            this.icon2_pb.TabStop = false;
+            this.icon2_pb.Visible = false;
+            this.icon2_pb.WaitOnLoad = true;
+            // 
+            // icon1_pb
+            // 
+            this.icon1_pb.BackColor = System.Drawing.Color.Transparent;
+            this.icon1_pb.Location = new System.Drawing.Point(122, 358);
+            this.icon1_pb.Name = "icon1_pb";
+            this.icon1_pb.Size = new System.Drawing.Size(160, 120);
+            this.icon1_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.icon1_pb.TabIndex = 13;
+            this.icon1_pb.TabStop = false;
+            this.icon1_pb.Visible = false;
             // 
             // questions_panel
             // 
@@ -239,6 +430,17 @@ namespace Circle_Time
             this.questions_panel.Size = new System.Drawing.Size(234, 54);
             this.questions_panel.TabIndex = 12;
             this.questions_panel.Visible = false;
+            // 
+            // questions_pb
+            // 
+            this.questions_pb.Image = global::Circle_Time.Properties.Resources.favpng_icon_question;
+            this.questions_pb.Location = new System.Drawing.Point(4, 4);
+            this.questions_pb.Name = "questions_pb";
+            this.questions_pb.Size = new System.Drawing.Size(58, 45);
+            this.questions_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.questions_pb.TabIndex = 1;
+            this.questions_pb.TabStop = false;
+            this.questions_pb.Click += new System.EventHandler(this.questions_pb_Click);
             // 
             // label6
             // 
@@ -262,6 +464,17 @@ namespace Circle_Time
             this.movement_panel.TabIndex = 11;
             this.movement_panel.Visible = false;
             // 
+            // movement_pb
+            // 
+            this.movement_pb.Image = global::Circle_Time.Properties.Resources.movement;
+            this.movement_pb.Location = new System.Drawing.Point(4, 4);
+            this.movement_pb.Name = "movement_pb";
+            this.movement_pb.Size = new System.Drawing.Size(58, 45);
+            this.movement_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.movement_pb.TabIndex = 1;
+            this.movement_pb.TabStop = false;
+            this.movement_pb.Click += new System.EventHandler(this.movement_pb_Click);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -283,6 +496,17 @@ namespace Circle_Time
             this.readbook_panel.Size = new System.Drawing.Size(234, 54);
             this.readbook_panel.TabIndex = 10;
             this.readbook_panel.Visible = false;
+            // 
+            // reading_pb
+            // 
+            this.reading_pb.Image = global::Circle_Time.Properties.Resources.reading;
+            this.reading_pb.Location = new System.Drawing.Point(4, 4);
+            this.reading_pb.Name = "reading_pb";
+            this.reading_pb.Size = new System.Drawing.Size(58, 45);
+            this.reading_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.reading_pb.TabIndex = 1;
+            this.reading_pb.TabStop = false;
+            this.reading_pb.Click += new System.EventHandler(this.reading_pb_Click);
             // 
             // label4
             // 
@@ -306,6 +530,17 @@ namespace Circle_Time
             this.helloteachers_panel.TabIndex = 9;
             this.helloteachers_panel.Visible = false;
             // 
+            // hiteacher_pb
+            // 
+            this.hiteacher_pb.Image = global::Circle_Time.Properties.Resources.Hello2;
+            this.hiteacher_pb.Location = new System.Drawing.Point(4, 4);
+            this.hiteacher_pb.Name = "hiteacher_pb";
+            this.hiteacher_pb.Size = new System.Drawing.Size(58, 45);
+            this.hiteacher_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.hiteacher_pb.TabIndex = 1;
+            this.hiteacher_pb.TabStop = false;
+            this.hiteacher_pb.Click += new System.EventHandler(this.hiteacher_pb_Click);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -327,6 +562,17 @@ namespace Circle_Time
             this.whoshere_panel.Size = new System.Drawing.Size(234, 54);
             this.whoshere_panel.TabIndex = 8;
             this.whoshere_panel.Visible = false;
+            // 
+            // whoshere_pb
+            // 
+            this.whoshere_pb.Image = global::Circle_Time.Properties.Resources.attend;
+            this.whoshere_pb.Location = new System.Drawing.Point(4, 4);
+            this.whoshere_pb.Name = "whoshere_pb";
+            this.whoshere_pb.Size = new System.Drawing.Size(58, 45);
+            this.whoshere_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.whoshere_pb.TabIndex = 1;
+            this.whoshere_pb.TabStop = false;
+            this.whoshere_pb.Click += new System.EventHandler(this.whoshere_pb_Click);
             // 
             // label2
             // 
@@ -350,6 +596,17 @@ namespace Circle_Time
             this.makechoice_panel.TabIndex = 7;
             this.makechoice_panel.Visible = false;
             // 
+            // mkchoice_pb
+            // 
+            this.mkchoice_pb.Image = global::Circle_Time.Properties.Resources.youtube1;
+            this.mkchoice_pb.Location = new System.Drawing.Point(4, 4);
+            this.mkchoice_pb.Name = "mkchoice_pb";
+            this.mkchoice_pb.Size = new System.Drawing.Size(58, 45);
+            this.mkchoice_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.mkchoice_pb.TabIndex = 1;
+            this.mkchoice_pb.TabStop = false;
+            this.mkchoice_pb.Click += new System.EventHandler(this.mkchoice_pb_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -359,6 +616,14 @@ namespace Circle_Time
             this.label1.Size = new System.Drawing.Size(152, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Make a choice";
+            // 
+            // background_pb
+            // 
+            this.background_pb.Location = new System.Drawing.Point(0, 3);
+            this.background_pb.Name = "background_pb";
+            this.background_pb.Size = new System.Drawing.Size(1323, 626);
+            this.background_pb.TabIndex = 0;
+            this.background_pb.TabStop = false;
             // 
             // tabPage2
             // 
@@ -385,6 +650,14 @@ namespace Circle_Time
             this.goback_lbl.Text = "<--- Go Back";
             this.goback_lbl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.goback_lbl_LinkClicked_1);
             // 
+            // background2_pb
+            // 
+            this.background2_pb.Location = new System.Drawing.Point(4, 4);
+            this.background2_pb.Name = "background2_pb";
+            this.background2_pb.Size = new System.Drawing.Size(1319, 628);
+            this.background2_pb.TabIndex = 0;
+            this.background2_pb.TabStop = false;
+            // 
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(206)))), ((int)(((byte)(230)))));
@@ -410,127 +683,6 @@ namespace Circle_Time
             this.goBack2_lbl.Text = "<--- Go Back";
             this.goBack2_lbl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.goBack2_lbl_LinkClicked);
             // 
-            // timer2
-            // 
-            this.timer2.Interval = 200;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // icon3_pb
-            // 
-            this.icon3_pb.BackColor = System.Drawing.Color.Transparent;
-            this.icon3_pb.Location = new System.Drawing.Point(1071, 38);
-            this.icon3_pb.Name = "icon3_pb";
-            this.icon3_pb.Size = new System.Drawing.Size(160, 120);
-            this.icon3_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.icon3_pb.TabIndex = 16;
-            this.icon3_pb.TabStop = false;
-            this.icon3_pb.Visible = false;
-            // 
-            // icon2_pb
-            // 
-            this.icon2_pb.BackColor = System.Drawing.Color.Transparent;
-            this.icon2_pb.Location = new System.Drawing.Point(1037, 483);
-            this.icon2_pb.Name = "icon2_pb";
-            this.icon2_pb.Size = new System.Drawing.Size(181, 146);
-            this.icon2_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.icon2_pb.TabIndex = 14;
-            this.icon2_pb.TabStop = false;
-            this.icon2_pb.Visible = false;
-            this.icon2_pb.WaitOnLoad = true;
-            // 
-            // icon1_pb
-            // 
-            this.icon1_pb.BackColor = System.Drawing.Color.Transparent;
-            this.icon1_pb.Location = new System.Drawing.Point(122, 358);
-            this.icon1_pb.Name = "icon1_pb";
-            this.icon1_pb.Size = new System.Drawing.Size(160, 120);
-            this.icon1_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.icon1_pb.TabIndex = 13;
-            this.icon1_pb.TabStop = false;
-            this.icon1_pb.Visible = false;
-            // 
-            // questions_pb
-            // 
-            this.questions_pb.Image = global::Circle_Time.Properties.Resources.favpng_icon_question;
-            this.questions_pb.Location = new System.Drawing.Point(4, 4);
-            this.questions_pb.Name = "questions_pb";
-            this.questions_pb.Size = new System.Drawing.Size(58, 45);
-            this.questions_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.questions_pb.TabIndex = 1;
-            this.questions_pb.TabStop = false;
-            this.questions_pb.Click += new System.EventHandler(this.questions_pb_Click);
-            // 
-            // movement_pb
-            // 
-            this.movement_pb.Image = global::Circle_Time.Properties.Resources.movement;
-            this.movement_pb.Location = new System.Drawing.Point(4, 4);
-            this.movement_pb.Name = "movement_pb";
-            this.movement_pb.Size = new System.Drawing.Size(58, 45);
-            this.movement_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.movement_pb.TabIndex = 1;
-            this.movement_pb.TabStop = false;
-            this.movement_pb.Click += new System.EventHandler(this.movement_pb_Click);
-            // 
-            // reading_pb
-            // 
-            this.reading_pb.Image = global::Circle_Time.Properties.Resources.reading;
-            this.reading_pb.Location = new System.Drawing.Point(4, 4);
-            this.reading_pb.Name = "reading_pb";
-            this.reading_pb.Size = new System.Drawing.Size(58, 45);
-            this.reading_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.reading_pb.TabIndex = 1;
-            this.reading_pb.TabStop = false;
-            this.reading_pb.Click += new System.EventHandler(this.reading_pb_Click);
-            // 
-            // hiteacher_pb
-            // 
-            this.hiteacher_pb.Image = global::Circle_Time.Properties.Resources.Hello2;
-            this.hiteacher_pb.Location = new System.Drawing.Point(4, 4);
-            this.hiteacher_pb.Name = "hiteacher_pb";
-            this.hiteacher_pb.Size = new System.Drawing.Size(58, 45);
-            this.hiteacher_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.hiteacher_pb.TabIndex = 1;
-            this.hiteacher_pb.TabStop = false;
-            this.hiteacher_pb.Click += new System.EventHandler(this.hiteacher_pb_Click);
-            // 
-            // whoshere_pb
-            // 
-            this.whoshere_pb.Image = global::Circle_Time.Properties.Resources.attend;
-            this.whoshere_pb.Location = new System.Drawing.Point(4, 4);
-            this.whoshere_pb.Name = "whoshere_pb";
-            this.whoshere_pb.Size = new System.Drawing.Size(58, 45);
-            this.whoshere_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.whoshere_pb.TabIndex = 1;
-            this.whoshere_pb.TabStop = false;
-            this.whoshere_pb.Click += new System.EventHandler(this.whoshere_pb_Click);
-            // 
-            // mkchoice_pb
-            // 
-            this.mkchoice_pb.Image = global::Circle_Time.Properties.Resources.youtube1;
-            this.mkchoice_pb.Location = new System.Drawing.Point(4, 4);
-            this.mkchoice_pb.Name = "mkchoice_pb";
-            this.mkchoice_pb.Size = new System.Drawing.Size(58, 45);
-            this.mkchoice_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.mkchoice_pb.TabIndex = 1;
-            this.mkchoice_pb.TabStop = false;
-            this.mkchoice_pb.Click += new System.EventHandler(this.mkchoice_pb_Click);
-            // 
-            // background_pb
-            // 
-            this.background_pb.Location = new System.Drawing.Point(0, 3);
-            this.background_pb.Name = "background_pb";
-            this.background_pb.Size = new System.Drawing.Size(1323, 626);
-            this.background_pb.TabIndex = 0;
-            this.background_pb.TabStop = false;
-            // 
-            // background2_pb
-            // 
-            this.background2_pb.Location = new System.Drawing.Point(4, 4);
-            this.background2_pb.Name = "background2_pb";
-            this.background2_pb.Size = new System.Drawing.Size(1319, 628);
-            this.background2_pb.TabIndex = 0;
-            this.background2_pb.TabStop = false;
-            // 
             // background3_pb
             // 
             this.background3_pb.Location = new System.Drawing.Point(4, 4);
@@ -539,117 +691,10 @@ namespace Circle_Time
             this.background3_pb.TabIndex = 0;
             this.background3_pb.TabStop = false;
             // 
-            // resetScheduleToolStripMenuItem
+            // timer2
             // 
-            this.resetScheduleToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.reset;
-            this.resetScheduleToolStripMenuItem.Name = "resetScheduleToolStripMenuItem";
-            this.resetScheduleToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
-            this.resetScheduleToolStripMenuItem.Text = "Reset Schedule";
-            this.resetScheduleToolStripMenuItem.Click += new System.EventHandler(this.resetScheduleToolStripMenuItem_Click);
-            // 
-            // settingsToolStripMenuItem
-            // 
-            this.settingsToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.settings_3110;
-            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
-            this.settingsToolStripMenuItem.Text = "Settings";
-            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
-            // 
-            // quitToolStripMenuItem
-            // 
-            this.quitToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.exit_icon;
-            this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
-            this.quitToolStripMenuItem.Text = "Quit";
-            this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
-            // 
-            // campingToolStripMenuItem
-            // 
-            this.campingToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.tent;
-            this.campingToolStripMenuItem.Name = "campingToolStripMenuItem";
-            this.campingToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
-            this.campingToolStripMenuItem.Text = "Camping";
-            this.campingToolStripMenuItem.Click += new System.EventHandler(this.campingToolStripMenuItem_Click);
-            // 
-            // classroomToolStripMenuItem
-            // 
-            this.classroomToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.presentation1;
-            this.classroomToolStripMenuItem.Name = "classroomToolStripMenuItem";
-            this.classroomToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
-            this.classroomToolStripMenuItem.Text = "Classroom";
-            this.classroomToolStripMenuItem.Click += new System.EventHandler(this.classroomToolStripMenuItem_Click);
-            // 
-            // disneyToolStripMenuItem
-            // 
-            this.disneyToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.disneyland;
-            this.disneyToolStripMenuItem.Name = "disneyToolStripMenuItem";
-            this.disneyToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
-            this.disneyToolStripMenuItem.Text = "Disney";
-            this.disneyToolStripMenuItem.Click += new System.EventHandler(this.disneyToolStripMenuItem_Click);
-            // 
-            // nintendoToolStripMenuItem
-            // 
-            this.nintendoToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.super_mario;
-            this.nintendoToolStripMenuItem.Name = "nintendoToolStripMenuItem";
-            this.nintendoToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
-            this.nintendoToolStripMenuItem.Text = "Nintendo";
-            this.nintendoToolStripMenuItem.Click += new System.EventHandler(this.nintendoToolStripMenuItem_Click);
-            // 
-            // pBSKidsToolStripMenuItem
-            // 
-            this.pBSKidsToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.cliford1;
-            this.pBSKidsToolStripMenuItem.Name = "pBSKidsToolStripMenuItem";
-            this.pBSKidsToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
-            this.pBSKidsToolStripMenuItem.Text = "PBS Kids";
-            this.pBSKidsToolStripMenuItem.Click += new System.EventHandler(this.pBSKidsToolStripMenuItem_Click);
-            // 
-            // safariToolStripMenuItem
-            // 
-            this.safariToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.clipart2401811;
-            this.safariToolStripMenuItem.Name = "safariToolStripMenuItem";
-            this.safariToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
-            this.safariToolStripMenuItem.Text = "Safari";
-            this.safariToolStripMenuItem.Click += new System.EventHandler(this.safariToolStripMenuItem_Click);
-            // 
-            // spaceToolStripMenuItem
-            // 
-            this.spaceToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.spaceship1;
-            this.spaceToolStripMenuItem.Name = "spaceToolStripMenuItem";
-            this.spaceToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
-            this.spaceToolStripMenuItem.Text = "Space";
-            this.spaceToolStripMenuItem.Click += new System.EventHandler(this.spaceToolStripMenuItem_Click);
-            // 
-            // spongebobToolStripMenuItem
-            // 
-            this.spongebobToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.spongebob_png_442261;
-            this.spongebobToolStripMenuItem.Name = "spongebobToolStripMenuItem";
-            this.spongebobToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
-            this.spongebobToolStripMenuItem.Text = "Spongebob";
-            this.spongebobToolStripMenuItem.Click += new System.EventHandler(this.spongebobToolStripMenuItem_Click);
-            // 
-            // theaterToolStripMenuItem
-            // 
-            this.theaterToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.theater_icon_29501;
-            this.theaterToolStripMenuItem.Name = "theaterToolStripMenuItem";
-            this.theaterToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
-            this.theaterToolStripMenuItem.Text = "Theater";
-            this.theaterToolStripMenuItem.Click += new System.EventHandler(this.theaterToolStripMenuItem_Click);
-            // 
-            // sToolStripMenuItem
-            // 
-            this.sToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.PngItem_174701__1_;
-            this.sToolStripMenuItem.Name = "sToolStripMenuItem";
-            this.sToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
-            this.sToolStripMenuItem.Text = "1980s";
-            this.sToolStripMenuItem.Click += new System.EventHandler(this.sToolStripMenuItem_Click);
-            // 
-            // youTubeToolStripMenuItem
-            // 
-            this.youTubeToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.youtube;
-            this.youTubeToolStripMenuItem.Name = "youTubeToolStripMenuItem";
-            this.youTubeToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
-            this.youTubeToolStripMenuItem.Text = "YouTube";
-            this.youTubeToolStripMenuItem.Click += new System.EventHandler(this.youTubeToolStripMenuItem_Click);
+            this.timer2.Interval = 200;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // Form1
             // 
@@ -670,33 +715,33 @@ namespace Circle_Time
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.questions_panel.ResumeLayout(false);
-            this.questions_panel.PerformLayout();
-            this.movement_panel.ResumeLayout(false);
-            this.movement_panel.PerformLayout();
-            this.readbook_panel.ResumeLayout(false);
-            this.readbook_panel.PerformLayout();
-            this.helloteachers_panel.ResumeLayout(false);
-            this.helloteachers_panel.PerformLayout();
-            this.whoshere_panel.ResumeLayout(false);
-            this.whoshere_panel.PerformLayout();
-            this.makechoice_panel.ResumeLayout(false);
-            this.makechoice_panel.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.icon3_pb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icon2_pb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icon1_pb)).EndInit();
+            this.questions_panel.ResumeLayout(false);
+            this.questions_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.questions_pb)).EndInit();
+            this.movement_panel.ResumeLayout(false);
+            this.movement_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.movement_pb)).EndInit();
+            this.readbook_panel.ResumeLayout(false);
+            this.readbook_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reading_pb)).EndInit();
+            this.helloteachers_panel.ResumeLayout(false);
+            this.helloteachers_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hiteacher_pb)).EndInit();
+            this.whoshere_panel.ResumeLayout(false);
+            this.whoshere_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.whoshere_pb)).EndInit();
+            this.makechoice_panel.ResumeLayout(false);
+            this.makechoice_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mkchoice_pb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.background_pb)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.background2_pb)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.background3_pb)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -757,6 +802,11 @@ namespace Circle_Time
         private ToolStripMenuItem spongebobToolStripMenuItem;
         private ToolStripMenuItem theaterToolStripMenuItem;
         private ToolStripMenuItem sToolStripMenuItem;
+        private ToolStripMenuItem viewHelpToolStripMenuItem;
+        private ToolStripMenuItem aboutCircleTimeToolStripMenuItem;
+        private ToolStripMenuItem circleTimeToolStripMenuItem;
+        private ToolStripMenuItem closingCircleToolStripMenuItem;
+        private ToolStripMenuItem resetSchdeuleToolStripMenuItem;
     }
 }
 

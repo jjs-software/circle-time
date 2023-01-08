@@ -59,8 +59,7 @@ namespace Circle_Time
         /// <param name="e"></param>
         private void Form1_Load(object sender, EventArgs e)
         {
-            // first time program has been run 
-
+            // get the property setting fo
         }
         /*---------------------------------------
          * 
@@ -70,13 +69,14 @@ namespace Circle_Time
          */
 
         /// <summary>
-        ///  File Menu: - > Reset Schedule
+        ///  File Menu: Circle Time  - > Reset Schedule
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         /// <exception cref="NotImplementedException"></exception>
-        private void resetScheduleToolStripMenuItem_Click(object sender, EventArgs e)
+        private void resetSchdeuleToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             // reset panel locations to origonal location
             makechoice_panel.Location = new Point(729, 153);
             whoshere_panel.Location = new Point(729, 222);
@@ -85,7 +85,6 @@ namespace Circle_Time
             movement_panel.Location = new Point(729, 433);
             questions_panel.Location = new Point(729, 508);
         }
-
         /// <summary>
         /// File Menu --> Settings 
         /// </summary>
@@ -711,8 +710,7 @@ namespace Circle_Time
             {
                 tabControl1.TabPages.Add(tabPage2);
                 tabControl1.SelectedTab = this.tabPage2;
-            }
-            
-        }
+            }            
+        }       
     } // class .
 } // method 
