@@ -10,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+/// TODO: Load Closing Circle Settings When Form is opend or Tabpage is selected.
 namespace Circle_Time
 {
     public partial class closing : Form
