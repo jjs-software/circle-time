@@ -11,22 +11,28 @@ namespace Circle_Time
 {
     internal class CtLoader
     {     
+        
         // vars
         Form1 form1 = (Form1)System.Windows.Forms.Application.OpenForms["Form1"];
         string directory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
         private string folderName = @"\circle_time";
 
-        // Load Students Photos into Tab2
-        public void LoadStudentPhotos(int index)
+            // Load Students Photos into Tab2
+            public void LoadStudentPhotos(int index)
         {
             PictureBox[] pics = new PictureBox[6];
+            // check if file student.txt exists if not create a blank text file
+            if (!File.Exists(directory + folderName + @"\students.txt"))
+            {
+                File.Create(directory + folderName + @"\students.txt");
+            }
             string path = @"students.txt";
             string filelocation = directory + folderName;
             List<string> allLinesText = File.ReadAllLines(filelocation + @"\" + path).ToList();
 
             foreach (var item in allLinesText)
             {
-                Console.WriteLine(item);
+                //Console.WriteLine(item);
                 index = allLinesText.IndexOf(item);
                 //index = index + 1;
                 //  pictureFile = filelocation + @"\" +  Name + ".jpg";
@@ -38,7 +44,7 @@ namespace Circle_Time
                 pics[index].Size = new Size(125, 107);
                 pics[index].Draggable(true);
                 form1.background2_pb.Controls.Add(pics[index]);
-                Console.WriteLine(index);
+                //Console.WriteLine(index);
                 pics[index].Image = b;
                 //pics[index].Location = new Point(184 + index + 100, 185);
                 if (index == 0)
@@ -77,11 +83,16 @@ namespace Circle_Time
             PictureBox[] pics = new PictureBox[6];
             string path = @"teachers.txt";
             string filelocation = directory + folderName;
+            // check if file exist if not create a blank text file
+            if (!File.Exists(directory + folderName + @"\teachers.txt"))
+            {
+                File.Create(directory + folderName + @"\teachers.txt");
+            }
             List<string> allLinesText2 = File.ReadAllLines(filelocation + @"\" + path).ToList();
 
             foreach (var item in allLinesText2)
             {
-                Console.WriteLine(item);
+                //Console.WriteLine(item);
                 index = allLinesText2.IndexOf(item);
                 //index = index + 1;
                 //  pictureFile = filelocation + @"\" +  Name + ".jpg";
@@ -93,7 +104,7 @@ namespace Circle_Time
                 pics[index].Size = new Size(125, 107);
                 pics[index].Draggable(true);
                 form1.background3_pb.Controls.Add(pics[index]);
-                Console.WriteLine(index);
+                //Console.WriteLine(index);
                 pics[index].Image = b;
                 //pics[index].Location = new Point(184 + index + 100, 185);
                 if (index == 0)
@@ -125,6 +136,24 @@ namespace Circle_Time
                 }
             }
         }
-
+        // destroy pic boxes
+        public void DestroyPicBoxes()
+        {
+            foreach (Control c in form1.background2_pb.Controls)
+            {
+                if (c is PictureBox)
+                {
+                    c.Dispose();
+                }
+            }
+            foreach (Control c in form1.background3_pb.Controls)
+            {
+                if (c is PictureBox)
+                {
+                    c.Dispose();
+                }
+            }
+        }
+        
     }
 }

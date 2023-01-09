@@ -30,10 +30,6 @@
         {
             this.kryptonTabControl1 = new AC.ExtendedRenderer.Navigator.KryptonTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.goBackCloseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.getVids_btn = new System.Windows.Forms.Button();
             this.gb6 = new System.Windows.Forms.GroupBox();
             this.pb6 = new System.Windows.Forms.PictureBox();
@@ -47,6 +43,7 @@
             this.pb2 = new System.Windows.Forms.PictureBox();
             this.gb1 = new System.Windows.Forms.GroupBox();
             this.pb1 = new System.Windows.Forms.PictureBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
@@ -64,10 +61,13 @@
             this.list1_tb = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.goBackCloseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.morningCircleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.closingCircleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kryptonTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             this.gb6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb6)).BeginInit();
             this.gb5.SuspendLayout();
@@ -80,11 +80,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb2)).BeginInit();
             this.gb1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb1)).BeginInit();
+            this.tabPage2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonTabControl1
@@ -128,49 +130,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Tag = false;
             this.tabPage1.Text = "YouTube";
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.Color.DimGray;
-            this.tabPage2.Controls.Add(this.panel4);
-            this.tabPage2.Controls.Add(this.panel3);
-            this.tabPage2.Controls.Add(this.panel2);
-            this.tabPage2.Controls.Add(this.panel1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 4);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(0);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(1326, 632);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Tag = false;
-            this.tabPage2.Text = "Settings";
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.Color.DimGray;
-            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1334, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // fileToolStripMenuItem
-            // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.goBackCloseToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.fileToolStripMenuItem.Text = "File";
-            // 
-            // goBackCloseToolStripMenuItem
-            // 
-            this.goBackCloseToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.backbutton;
-            this.goBackCloseToolStripMenuItem.Name = "goBackCloseToolStripMenuItem";
-            this.goBackCloseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.goBackCloseToolStripMenuItem.Text = "Go Back / Close";
-            this.goBackCloseToolStripMenuItem.Click += new System.EventHandler(this.goBackCloseToolStripMenuItem_Click);
             // 
             // getVids_btn
             // 
@@ -325,6 +284,21 @@
             this.pb1.TabIndex = 1;
             this.pb1.TabStop = false;
             this.pb1.Click += new System.EventHandler(this.pb1_Click);
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage2.Controls.Add(this.panel4);
+            this.tabPage2.Controls.Add(this.panel3);
+            this.tabPage2.Controls.Add(this.panel2);
+            this.tabPage2.Controls.Add(this.panel1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 4);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(0);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Size = new System.Drawing.Size(1326, 632);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Tag = false;
+            this.tabPage2.Text = "Settings";
             // 
             // panel4
             // 
@@ -511,6 +485,53 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Auto Load List";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.Color.DimGray;
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1334, 24);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.goBackCloseToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // goBackCloseToolStripMenuItem
+            // 
+            this.goBackCloseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.morningCircleToolStripMenuItem,
+            this.closingCircleToolStripMenuItem});
+            this.goBackCloseToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.backbutton;
+            this.goBackCloseToolStripMenuItem.Name = "goBackCloseToolStripMenuItem";
+            this.goBackCloseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.goBackCloseToolStripMenuItem.Text = "Go Back ";
+            this.goBackCloseToolStripMenuItem.Click += new System.EventHandler(this.goBackCloseToolStripMenuItem_Click);
+            // 
+            // morningCircleToolStripMenuItem
+            // 
+            this.morningCircleToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.morning_icon;
+            this.morningCircleToolStripMenuItem.Name = "morningCircleToolStripMenuItem";
+            this.morningCircleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.morningCircleToolStripMenuItem.Text = "Morning Circle";
+            this.morningCircleToolStripMenuItem.Click += new System.EventHandler(this.morningCircleToolStripMenuItem_Click);
+            // 
+            // closingCircleToolStripMenuItem
+            // 
+            this.closingCircleToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.presentation;
+            this.closingCircleToolStripMenuItem.Name = "closingCircleToolStripMenuItem";
+            this.closingCircleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.closingCircleToolStripMenuItem.Text = "Closing Circle";
+            this.closingCircleToolStripMenuItem.Click += new System.EventHandler(this.closingCircleToolStripMenuItem_Click);
+            // 
             // Youtube
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -527,9 +548,6 @@
             this.Load += new System.EventHandler(this.Youtube_Load);
             this.kryptonTabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.gb6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pb6)).EndInit();
             this.gb5.ResumeLayout(false);
@@ -542,6 +560,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb2)).EndInit();
             this.gb1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pb1)).EndInit();
+            this.tabPage2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
@@ -551,6 +570,8 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -594,5 +615,7 @@
         private System.Windows.Forms.TextBox list1_tb;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem morningCircleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem closingCircleToolStripMenuItem;
     }
 }

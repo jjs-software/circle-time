@@ -34,5 +34,17 @@ namespace Circle_Time.Properties {
                 this["filelocation"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool firstrun {
+            get {
+                return ((bool)(this["firstrun"]));
+            }
+            set {
+                this["firstrun"] = value;
+            }
+        }
     }
 }

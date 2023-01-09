@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -36,11 +39,38 @@ namespace Circle_Time
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void goBackCloseToolStripMenuItem_Click(object sender, EventArgs e)
+        /// 
+        /// Go Back to morning Circle 
+        private void morningCircleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form1 f1 = (Form1)Application.OpenForms["Form1"];
             f1.Show();
             Hide();
+        }
+        /// <summary>
+        ///  Go Back to Closing Circle
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void closingCircleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // check if the form is already open
+            if (Application.OpenForms.OfType<closing>().Count() == 1)
+            {
+                closing f2 = (closing)Application.OpenForms["closing"];
+                f2.Show();
+                Hide();
+            }
+            else
+            {
+                closing f2 = new closing();
+                f2.Show();
+                Hide();
+            }
+        }
+        private void goBackCloseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           // do nothing 
         }
 
         // FORM CLOSE VIA CONTROLBOX
@@ -50,9 +80,34 @@ namespace Circle_Time
             f1.Show();
             Hide();
         }
-
+        
+        // check for internet connection  ADDED ON 01/03/23 To Prevent Endless Looping
+        static bool checkInternet()
+        {
+            try
+            {
+                Ping myPing = new Ping();
+                String host = "google.com";
+                byte[] buffer = new byte[32];
+                int timeout = 1000;
+                PingOptions pingOptions = new PingOptions();
+                PingReply reply = myPing.Send(host, timeout, buffer, pingOptions);
+                return (reply.Status == IPStatus.Success);
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
         private void getVids_btn_Click(object sender, EventArgs e)
         {
+            // First check to make sure there is an internet connection
+            bool internet = checkInternet();
+            if (internet == false)
+            {
+                MessageBox.Show("No internet connection detected. Please connect to the internet and try again.", "No internet connection", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             Properties.Settings.Default.Reload();
             // Clear Previous List before Displaying New List - Added In Rev
             yt.youtubelist.Clear();
@@ -225,9 +280,8 @@ namespace Circle_Time
                 } // end of switch
             } // end of for loop
         }
-
-        // Picturebox1 click event 
-        private void pb1_Click(object sender, EventArgs e)
+// Picturebox1 click event 
+private void pb1_Click(object sender, EventArgs e)
         {
             // Stop Null box clicks 
             if (yt.v1 == null)
@@ -554,5 +608,6 @@ namespace Circle_Time
             }
         }
 
+       
     }
 }

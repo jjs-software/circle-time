@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,6 +20,12 @@ namespace Circle_Time
         Themes themes = new Themes();
         string directory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
         public string folderName = @"\circle_time";
+        // bool checks for updates 
+        bool studentPhotosLoaded = false;
+        bool studentPhotosUpdated = false;
+        bool teacherPhotosLoaded = false;
+        bool teacherPhotosUpdated = false;
+        bool firststart;
         public Form1()
         {
             InitializeComponent();
@@ -52,10 +59,7 @@ namespace Circle_Time
         /// <param name="e"></param>
         private void Form1_Load(object sender, EventArgs e)
         {
-            /// hide tabPage2 & TabPage3 in TabControl
-            tabControl1.TabPages.Remove(tabPage2);
-            tabControl1.TabPages.Remove(tabPage3);
-            CtLoader ct = new CtLoader();
+            // get the property setting fo
         }
         /*---------------------------------------
          * 
@@ -65,13 +69,25 @@ namespace Circle_Time
          */
 
         /// <summary>
-        ///  File Menu: - > Reset Schedule
+        ///  File Menu: Circle Time --> Closing Circle 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void closingCircleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            closing closing = new closing();
+            closing.Show();
+            Hide();
+        }
+        /// <summary>
+        ///  File Menu: Circle Time  - > Reset Schedule
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         /// <exception cref="NotImplementedException"></exception>
-        private void resetScheduleToolStripMenuItem_Click(object sender, EventArgs e)
+        private void resetSchdeuleToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             // reset panel locations to origonal location
             makechoice_panel.Location = new Point(729, 153);
             whoshere_panel.Location = new Point(729, 222);
@@ -80,7 +96,6 @@ namespace Circle_Time
             movement_panel.Location = new Point(729, 433);
             questions_panel.Location = new Point(729, 508);
         }
-
         /// <summary>
         /// File Menu --> Settings 
         /// </summary>
@@ -124,7 +139,7 @@ namespace Circle_Time
          */
 
         /// <summary>
-        ///  Theme Menu  --> Camping
+        ///  Theme Menu  --> Camping Theme
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -134,9 +149,17 @@ namespace Circle_Time
             notice_lbl.Visible = false;
             Themes themes = new Themes();
             themes.loadCampingTheme();
-            // show tabpages 
-            tabControl1.TabPages.Add(tabPage2);
-            tabControl1.TabPages.Add(tabPage3);
+            themes.showPanels(true);
+            // show tabpages                                                            
+            // To prevent creating duplicate tabpages
+            if (!tabControl1.TabPages.Contains(tabPage2))
+            {
+                tabControl1.TabPages.Add(tabPage2);
+            }
+            if (!tabControl1.TabPages.Contains(tabPage3))
+            {
+                tabControl1.TabPages.Add(tabPage3);
+            }
             // change the background on the panels 
             makechoice_panel.BackColor = Color.SeaGreen;
             whoshere_panel.BackColor = Color.SeaGreen;
@@ -158,15 +181,412 @@ namespace Circle_Time
             label6.ForeColor = Color.WhiteSmoke;
             label6.Font = new Font(label6.Font, FontStyle.Bold);
             // timer1.Start();
-            timer2.Start();
+           // timer2.Start();
         }
 
+
         /// <summary>
-        ///  Animated Icon1
+        /// Theme Menu --> Classroom Theme
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
+        private void classroomToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Themes themes = new Themes();
+            themes.currentTheme = "classroom";
+            themes.loadClassroomtheme();
+            // Hide Notice Label
+            notice_lbl.Visible = false;
+            // To prevent creating duplicate tabpages
+            if (!tabControl1.TabPages.Contains(tabPage2))
+            {
+                tabControl1.TabPages.Add(tabPage2);
+            }
+            if (!tabControl1.TabPages.Contains(tabPage3))
+            {
+                tabControl1.TabPages.Add(tabPage3);
+            }
+            // change the background on the panels 
+            makechoice_panel.BackColor = Color.FromArgb(245, 242, 223);
+            whoshere_panel.BackColor = Color.FromArgb(245, 242, 223);
+            helloteachers_panel.BackColor = Color.FromArgb(245, 242, 223);
+            movement_panel.BackColor = Color.FromArgb(245, 242, 223);
+            readbook_panel.BackColor = Color.FromArgb(245, 242, 223);
+            questions_panel.BackColor = Color.FromArgb(245, 242, 223);
+            // change the font style to bold for label1
+            label1.ForeColor = Color.IndianRed;
+            label1.Font = new Font(label1.Font, FontStyle.Bold);
+            label2.ForeColor = Color.IndianRed;
+            label2.Font = new Font(label2.Font, FontStyle.Bold);
+            label3.ForeColor = Color.IndianRed;
+            label3.Font = new Font(label3.Font, FontStyle.Bold);
+            label4.ForeColor = Color.IndianRed;
+            label4.Font = new Font(label4.Font, FontStyle.Bold);
+            label5.ForeColor = Color.IndianRed;
+            label5.Font = new Font(label5.Font, FontStyle.Bold);
+            label6.ForeColor = Color.IndianRed;
+            label6.Font = new Font(label6.Font, FontStyle.Bold);
+        }
+        
+        
+        /// <summary>
+        ///  Theme Menu ---> Disney Theme
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void disneyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // first load the disney theme
+            Themes themes = new Themes();
+            themes.currentTheme = "disney";
+            themes.loadDisneytheme();
+            // Hide Notice Label
+            notice_lbl.Visible = false;
+            // To prevent creating duplicate tabpages
+            if (!tabControl1.TabPages.Contains(tabPage2))
+            {
+                tabControl1.TabPages.Add(tabPage2);
+            }
+            if (!tabControl1.TabPages.Contains(tabPage3))
+            {
+                tabControl1.TabPages.Add(tabPage3);
+            }
+            // change the background on the panels 
+            makechoice_panel.BackColor = Color.FromArgb(192, 145, 137);
+            whoshere_panel.BackColor = Color.FromArgb(192, 145, 137);
+            helloteachers_panel.BackColor = Color.FromArgb(192, 145, 137);
+            movement_panel.BackColor = Color.FromArgb(192, 145, 137);
+            readbook_panel.BackColor = Color.FromArgb(192, 145, 137);
+            questions_panel.BackColor = Color.FromArgb(192, 145, 137);
+            // change the font style to bold for label1
+            label1.ForeColor = Color.Purple;
+            label1.Font = new Font(label1.Font, FontStyle.Bold);
+            label2.ForeColor = Color.Purple;
+            label2.Font = new Font(label2.Font, FontStyle.Bold);
+            label3.ForeColor = Color.Purple;
+            label3.Font = new Font(label3.Font, FontStyle.Bold);
+            label4.ForeColor = Color.Purple;
+            label4.Font = new Font(label4.Font, FontStyle.Bold);
+            label5.ForeColor = Color.Purple;
+            label5.Font = new Font(label5.Font, FontStyle.Bold);
+            label6.ForeColor = Color.Purple;
+            label6.Font = new Font(label6.Font, FontStyle.Bold);
+        }
 
+        /// <summary>
+        ///  Theme Menu --> Nintendo Theme
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void nintendoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // first load the theme
+            Themes themes = new Themes();
+            themes.currentTheme = "nintendo";
+            themes.loadNintendotheme();
+            // Hide Notice Label
+            notice_lbl.Visible = false;
+            // To prevent creating duplicate tabpages
+            if (!tabControl1.TabPages.Contains(tabPage2))
+            {
+                tabControl1.TabPages.Add(tabPage2);
+            }
+            if (!tabControl1.TabPages.Contains(tabPage3))
+            {
+                tabControl1.TabPages.Add(tabPage3);
+            }
+            // change the background on the panels 
+            makechoice_panel.BackColor = Color.FromArgb(162,215, 233);
+            whoshere_panel.BackColor = Color.FromArgb(162, 215, 233);
+            helloteachers_panel.BackColor = Color.FromArgb(162, 215, 233);
+            movement_panel.BackColor = Color.FromArgb(162, 215, 233);
+            readbook_panel.BackColor = Color.FromArgb(162, 215, 233);
+            questions_panel.BackColor = Color.FromArgb(162, 215, 233);
+            // change the font style to bold for label1
+            label1.ForeColor = Color.DarkOliveGreen;
+            label1.Font = new Font(label1.Font, FontStyle.Bold);
+            label2.ForeColor = Color.DarkOliveGreen;
+            label2.Font = new Font(label2.Font, FontStyle.Bold);
+            label3.ForeColor = Color.DarkOliveGreen;
+            label3.Font = new Font(label3.Font, FontStyle.Bold);
+            label4.ForeColor = Color.DarkOliveGreen;
+            label4.Font = new Font(label4.Font, FontStyle.Bold);
+            label5.ForeColor = Color.DarkOliveGreen;
+            label5.Font = new Font(label5.Font, FontStyle.Bold);
+            label6.ForeColor = Color.DarkOliveGreen;
+            label6.Font = new Font(label6.Font, FontStyle.Bold);
+        }
+
+        
+        /// <summary>
+        ///  Theme Menu ---> PBS Kids Theme
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void pBSKidsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // first load the theme
+            Themes themes = new Themes();
+            themes.currentTheme = "pbskids";
+            themes.loadPbskidstheme(); ;
+            // Hide Notice Label
+            notice_lbl.Visible = false;
+            // To prevent creating duplicate tabpages
+            if (!tabControl1.TabPages.Contains(tabPage2))
+            {
+                tabControl1.TabPages.Add(tabPage2);
+            }
+            if (!tabControl1.TabPages.Contains(tabPage3))
+            {
+                tabControl1.TabPages.Add(tabPage3);
+            }
+            // change the background on the panels 
+            makechoice_panel.BackColor = Color.FromArgb(239, 104, 176);
+            whoshere_panel.BackColor = Color.FromArgb(239, 104, 176);
+            helloteachers_panel.BackColor = Color.FromArgb(239, 104, 176);
+            movement_panel.BackColor = Color.FromArgb(239, 104, 176);
+            readbook_panel.BackColor = Color.FromArgb(239, 104, 176);
+            questions_panel.BackColor = Color.FromArgb(239, 104, 176);
+            // change the font style to bold for label1
+            label1.ForeColor = Color.WhiteSmoke;
+            label1.Font = new Font(label1.Font, FontStyle.Bold);
+            label2.ForeColor = Color.WhiteSmoke;
+            label2.Font = new Font(label2.Font, FontStyle.Bold);
+            label3.ForeColor = Color.WhiteSmoke;
+            label3.Font = new Font(label3.Font, FontStyle.Bold);
+            label4.ForeColor = Color.WhiteSmoke;
+            label4.Font = new Font(label4.Font, FontStyle.Bold);
+            label5.ForeColor = Color.WhiteSmoke;
+            label5.Font = new Font(label5.Font, FontStyle.Bold);
+            label6.ForeColor = Color.WhiteSmoke;
+            label6.Font = new Font(label6.Font, FontStyle.Bold);
+        }
+
+        /// <summary>
+        ///  Theme Menu ---> Safari Theme
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void safariToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // first load the theme
+            Themes themes = new Themes();
+            themes.currentTheme = "safari";
+            themes.loadSafaritheme();
+            // Hide Notice Label
+            notice_lbl.Visible = false;
+            // To prevent creating duplicate tabpages
+            if (!tabControl1.TabPages.Contains(tabPage2))
+            {
+                tabControl1.TabPages.Add(tabPage2);
+            }
+            if (!tabControl1.TabPages.Contains(tabPage3))
+            {
+                tabControl1.TabPages.Add(tabPage3);
+            }
+            // change the background on the panels 
+            makechoice_panel.BackColor = Color.FromArgb(243, 218, 117);
+            whoshere_panel.BackColor = Color.FromArgb(243, 218, 117);
+            helloteachers_panel.BackColor = Color.FromArgb(243, 218, 117);
+            movement_panel.BackColor = Color.FromArgb(243, 218, 117); 
+            readbook_panel.BackColor = Color.FromArgb(243, 218, 117);
+            questions_panel.BackColor = Color.FromArgb(243, 218, 117);
+            // change the font style to bold for label1
+            label1.ForeColor = Color.FromArgb(96, 43, 39);
+            label1.Font = new Font(label1.Font, FontStyle.Bold);
+            label2.ForeColor = Color.FromArgb(96, 43, 39);
+            label2.Font = new Font(label2.Font, FontStyle.Bold);
+            label3.ForeColor = Color.FromArgb(96, 43, 39);
+            label3.Font = new Font(label3.Font, FontStyle.Bold);
+            label4.ForeColor = Color.FromArgb(96, 43, 39);
+            label4.Font = new Font(label4.Font, FontStyle.Bold);
+            label5.ForeColor = Color.FromArgb(96, 43, 39);
+            label5.Font = new Font(label5.Font, FontStyle.Bold);
+            label6.ForeColor = Color.FromArgb(96, 43, 39);
+            label6.Font = new Font(label6.Font, FontStyle.Bold);
+        }
+        
+        
+        /// <summary>
+        ///  Theme Menu ---> Space theme
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void spaceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // space theme
+            Themes themes = new Themes();
+            themes.currentTheme = "space";
+            themes.loadSpacetheme();
+            // Hide Notice Label
+            notice_lbl.Visible = false;
+            // To prevent creating duplicate tabpages
+            if (!tabControl1.TabPages.Contains(tabPage2))
+            {
+                tabControl1.TabPages.Add(tabPage2);
+            }
+            if (!tabControl1.TabPages.Contains(tabPage3))
+            {
+                tabControl1.TabPages.Add(tabPage3);
+            }
+            // change the background on the panels 
+            makechoice_panel.BackColor = Color.FromArgb(243, 218, 117);
+            whoshere_panel.BackColor = Color.FromArgb(243, 218, 117);
+            helloteachers_panel.BackColor = Color.FromArgb(243, 218, 117);
+            movement_panel.BackColor = Color.FromArgb(243, 218, 117);
+            readbook_panel.BackColor = Color.FromArgb(243, 218, 117);
+            questions_panel.BackColor = Color.FromArgb(243, 218, 117);
+            // change the font style to bold for label1
+            label1.ForeColor = Color.Red;
+            label1.Font = new Font(label1.Font, FontStyle.Bold);
+            label2.ForeColor = Color.Red;
+            label2.Font = new Font(label2.Font, FontStyle.Bold);
+            label3.ForeColor = Color.Red; ;
+            label3.Font = new Font(label3.Font, FontStyle.Bold);
+            label4.ForeColor = Color.Red;
+            label4.Font = new Font(label4.Font, FontStyle.Bold);
+            label5.ForeColor = Color.Red;
+            label5.Font = new Font(label5.Font, FontStyle.Bold);
+            label6.ForeColor = Color.Red;
+            label6.Font = new Font(label6.Font, FontStyle.Bold);
+        }
+        /// <summary>
+        ///  Theme Menu ----> SpongeBob
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void spongebobToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //load spongebob theme
+            Themes themes = new Themes();
+            themes.currentTheme = "spongebob";
+            themes.loadSpongebobtheme();
+            // Hide Notice Label
+            notice_lbl.Visible = false;
+            // To prevent creating duplicate tabpages
+            if (!tabControl1.TabPages.Contains(tabPage2))
+            {
+                tabControl1.TabPages.Add(tabPage2);
+            }
+            if (!tabControl1.TabPages.Contains(tabPage3))
+            {
+                tabControl1.TabPages.Add(tabPage3);
+            }
+            // change the background on the panels 
+            makechoice_panel.BackColor = Color.FromArgb(94, 205, 232);
+            whoshere_panel.BackColor = Color.FromArgb(94, 205, 232);
+            helloteachers_panel.BackColor = Color.FromArgb(94, 205, 232);
+            movement_panel.BackColor = Color.FromArgb(94, 205, 232);
+            readbook_panel.BackColor = Color.FromArgb(94, 205, 232);
+            questions_panel.BackColor = Color.FromArgb(94, 205, 232);
+            // change the font style to bold for label1
+            label1.ForeColor = Color.FromArgb(255, 248, 178);
+            label1.Font = new Font(label1.Font, FontStyle.Bold);
+            label2.ForeColor = Color.FromArgb(255, 248, 178);
+            label2.Font = new Font(label2.Font, FontStyle.Bold);
+            label3.ForeColor = Color.FromArgb(255, 248, 178);
+            label3.Font = new Font(label3.Font, FontStyle.Bold);
+            label4.ForeColor = Color.FromArgb(255, 248, 178);
+            label4.Font = new Font(label4.Font, FontStyle.Bold);
+            label5.ForeColor = Color.FromArgb(255, 248, 178);
+            label5.Font = new Font(label5.Font, FontStyle.Bold);
+            label6.ForeColor = Color.FromArgb(255, 248, 178);
+            label6.Font = new Font(label6.Font, FontStyle.Bold);
+        }
+
+        /// <summary>
+        ///  Theme menu ----> Theater
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void theaterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // load theater theme
+            Themes themes = new Themes();
+            themes.currentTheme = "theater";
+            themes.loadTheatertheme();
+            // Hide Notice Label
+            notice_lbl.Visible = false;
+            // To prevent creating duplicate tabpages
+            if (!tabControl1.TabPages.Contains(tabPage2))
+            {
+                tabControl1.TabPages.Add(tabPage2);
+            }
+            if (!tabControl1.TabPages.Contains(tabPage3))
+            {
+                tabControl1.TabPages.Add(tabPage3);
+            }
+            // change panel colors 
+            makechoice_panel.BackColor = Color.FromArgb(197,155,139);
+          whoshere_panel.BackColor = Color.FromArgb(197, 155, 139);
+            helloteachers_panel.BackColor = Color.FromArgb(197, 155, 139);
+            movement_panel.BackColor = Color.FromArgb(197, 155, 139);
+            readbook_panel.BackColor = Color.FromArgb(197, 155, 139);
+            questions_panel.BackColor = Color.FromArgb(197, 155, 139);
+            // change the font style to bold for label1
+            label1.ForeColor = Color.FromArgb(255, 248, 178);
+            label1.Font = new Font(label1.Font, FontStyle.Bold);
+            label2.ForeColor = Color.FromArgb(255, 248, 178);
+            label2.Font = new Font(label2.Font, FontStyle.Bold);
+            label3.ForeColor = Color.FromArgb(255, 248, 178);
+            label3.Font = new Font(label3.Font, FontStyle.Bold);
+            label4.ForeColor = Color.FromArgb(255, 248, 178);
+            label4.Font = new Font(label4.Font, FontStyle.Bold);
+            label5.ForeColor = Color.FromArgb(255, 248, 178);
+            label5.Font = new Font(label5.Font, FontStyle.Bold);
+            label6.ForeColor = Color.FromArgb(255, 248, 178);
+            label6.Font = new Font(label6.Font, FontStyle.Bold);
+        }
+
+        /// <summary>
+        ///  THeme menu ---> 1980s
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void sToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // load theater theme
+            Themes themes = new Themes();
+            themes.currentTheme = "1980s";
+            themes.load80stheme();
+            // Hide Notice Label
+            notice_lbl.Visible = false;
+            // To prevent creating duplicate tabpages
+            if (!tabControl1.TabPages.Contains(tabPage2))
+            {
+                tabControl1.TabPages.Add(tabPage2);
+            }
+            if (!tabControl1.TabPages.Contains(tabPage3))
+            {
+                tabControl1.TabPages.Add(tabPage3);
+            }
+            // change the background on the panels 
+            makechoice_panel.BackColor = Color.FromArgb(85, 29, 88);
+            whoshere_panel.BackColor = Color.FromArgb(85, 29, 88);
+            helloteachers_panel.BackColor = Color.FromArgb(85, 29, 88);
+            movement_panel.BackColor = Color.FromArgb(85, 29, 88);
+            readbook_panel.BackColor = Color.FromArgb(85, 29, 88);
+            questions_panel.BackColor = Color.FromArgb(85, 29, 88);
+            // change the font style to bold for label1
+            label1.ForeColor = Color.FromArgb(229, 165, 78);
+            label1.Font = new Font(label1.Font, FontStyle.Bold);
+            label2.ForeColor = Color.FromArgb(229, 165, 78);
+            label2.Font = new Font(label2.Font, FontStyle.Bold);
+            label3.ForeColor = Color.FromArgb(229, 165, 78);
+            label3.Font = new Font(label3.Font, FontStyle.Bold);
+            label4.ForeColor = Color.FromArgb(229, 165, 78);
+            label4.Font = new Font(label4.Font, FontStyle.Bold);
+            label5.ForeColor = Color.FromArgb(229, 165, 78);
+            label5.Font = new Font(label5.Font, FontStyle.Bold);
+            label6.ForeColor = Color.FromArgb(229, 165, 78);
+            label6.Font = new Font(label6.Font, FontStyle.Bold);
+        }
+        /// ======================================
+        ///   
+        ///           Animated Icons 
+        /// =======================================
+        /// 
+        /// <param name="e"></param>
         // animated icon1
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -180,7 +600,7 @@ namespace Circle_Time
                 icon1_pb.Left = this.Width;
             }
         }
-
+        // animated Icon2
         private void timer2_Tick(object sender, EventArgs e)
         {
             icon2_pb.Left -= 10;
@@ -296,18 +716,14 @@ namespace Circle_Time
         // tabpage Selected Inex change 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // if TabPage2 is selected Load Student Photos
-            if (tabControl1.SelectedTab == tabControl1.TabPages["tabPage2"])
+            // if tabpage 2 is not added then add it otherwize just select it 
+            if (!tabControl1.TabPages.Contains(tabPage2))
             {
-                CtLoader ct = new CtLoader();
-                ct.LoadStudentPhotos(0);
-            }
-            // if Tabpage 3 is selected Load Teachers Photos 
-            if (tabControl1.SelectedTab == tabControl1.TabPages["tabPage3"])
-            {
-                CtLoader ct = new CtLoader();
-                ct.LoadTeachersPhotos(0);
-            }
+                tabControl1.TabPages.Add(tabPage2);
+                tabControl1.SelectedTab = this.tabPage2;
+            }            
         }
-    }
-}
+
+       
+    } // class .
+} // method 
