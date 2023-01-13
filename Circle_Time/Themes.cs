@@ -27,12 +27,12 @@ namespace Circle_Time
                
             } else
             {
-                form1.makechoice_panel.Visible = vis;
-                form1.whoshere_panel.Visible = vis;
-                form1.helloteachers_panel.Visible = vis;
-                form1.readbook_panel.Visible = vis;
-                form1.movement_panel.Visible=vis;
-                form1.questions_panel.Visible = vis;
+                form1.mkchoice_pb.Visible = vis;
+                form1.whoshere_pb.Visible = vis;
+                form1.hiteacher_pb.Visible = vis;
+                form1.reading_pb.Visible = vis;
+                form1.movement_pb.Visible=vis;
+                form1.questions_pb.Visible = vis;
             }
         }
    
