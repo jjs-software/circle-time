@@ -13,7 +13,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\WINGS\Desktop\pub\dev0.2\v2\</PublishUrl>
+    <PublishUrl>C:\Users\WINGS\Desktop\pub\V3\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -26,9 +26,9 @@
     <ProductName>Circle Time</ProductName>
     <PublisherName>Jeremy Stevens</PublisherName>
     <SuiteName>Circle TIme</SuiteName>
-    <MinimumRequiredVersion>1.0.0.2</MinimumRequiredVersion>
+    <MinimumRequiredVersion>1.0.0.3</MinimumRequiredVersion>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationRevision>4</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -372,6 +372,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="cooperation-png-10342-Windows.ico" />
+    <None Include="Resources\questions.png" />
+    <None Include="Resources\movment.png" />
+    <None Include="Resources\read_book1.png" />
+    <None Include="Resources\read_book.png" />
+    <None Include="Resources\hello_teachers.png" />
+    <None Include="Resources\whos_here.png" />
+    <None Include="Resources\make_choice.png" />
     <None Include="Resources\morning-icon.png" />
     <None Include="Resources\goodbye.PNG" />
     <None Include="Resources\vacum.PNG" />

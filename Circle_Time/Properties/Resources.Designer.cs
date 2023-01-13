@@ -323,9 +323,29 @@ namespace Circle_Time.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hello_teachers {
+            get {
+                object obj = ResourceManager.GetObject("hello_teachers", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Hello2 {
             get {
                 object obj = ResourceManager.GetObject("Hello2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap make_choice {
+            get {
+                object obj = ResourceManager.GetObject("make_choice", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -346,6 +366,16 @@ namespace Circle_Time.Properties {
         internal static System.Drawing.Bitmap movement {
             get {
                 object obj = ResourceManager.GetObject("movement", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap movment {
+            get {
+                object obj = ResourceManager.GetObject("movment", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -443,9 +473,39 @@ namespace Circle_Time.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap questions {
+            get {
+                object obj = ResourceManager.GetObject("questions", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap rabs {
             get {
                 object obj = ResourceManager.GetObject("rabs", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap read_book {
+            get {
+                object obj = ResourceManager.GetObject("read_book", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap read_book1 {
+            get {
+                object obj = ResourceManager.GetObject("read_book1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -686,6 +746,16 @@ namespace Circle_Time.Properties {
         internal static System.Drawing.Bitmap vacum {
             get {
                 object obj = ResourceManager.GetObject("vacum", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap whos_here {
+            get {
+                object obj = ResourceManager.GetObject("whos_here", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
