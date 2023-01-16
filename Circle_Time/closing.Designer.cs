@@ -54,27 +54,27 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.reading_tb = new System.Windows.Forms.TextBox();
-            this.morning_rb = new System.Windows.Forms.RichTextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.afternoon_rb = new System.Windows.Forms.RichTextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.status_lbl = new System.Windows.Forms.Label();
+            this.paste2_btn = new System.Windows.Forms.Button();
+            this.paste1_btn = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.song_tb = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.reading_tb = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.loadbox2_btn = new System.Windows.Forms.Button();
+            this.loadbox1_btn = new System.Windows.Forms.Button();
+            this.saveCC_btn = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.bookTitle_tb = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.afternoon_rb = new System.Windows.Forms.RichTextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.saveCC_btn = new System.Windows.Forms.Button();
-            this.loadbox1_btn = new System.Windows.Forms.Button();
-            this.loadbox2_btn = new System.Windows.Forms.Button();
-            this.paste1_btn = new System.Windows.Forms.Button();
-            this.paste2_btn = new System.Windows.Forms.Button();
-            this.status_lbl = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.morning_rb = new System.Windows.Forms.RichTextBox();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -94,9 +94,9 @@
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -276,6 +276,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label2
             // 
@@ -364,102 +365,34 @@
             this.splitContainer2.SplitterDistance = 349;
             this.splitContainer2.TabIndex = 5;
             // 
-            // panel6
+            // status_lbl
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(206)))), ((int)(((byte)(235)))));
-            this.panel6.Controls.Add(this.reading_tb);
-            this.panel6.Location = new System.Drawing.Point(4, 83);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(340, 53);
-            this.panel6.TabIndex = 0;
+            this.status_lbl.AutoSize = true;
+            this.status_lbl.Location = new System.Drawing.Point(115, 375);
+            this.status_lbl.Name = "status_lbl";
+            this.status_lbl.Size = new System.Drawing.Size(23, 13);
+            this.status_lbl.TabIndex = 6;
+            this.status_lbl.Text = "null";
             // 
-            // panel7
+            // paste2_btn
             // 
-            this.panel7.Controls.Add(this.loadbox2_btn);
-            this.panel7.Controls.Add(this.loadbox1_btn);
-            this.panel7.Controls.Add(this.saveCC_btn);
-            this.panel7.Controls.Add(this.panel9);
-            this.panel7.Controls.Add(this.label9);
-            this.panel7.Controls.Add(this.afternoon_rb);
-            this.panel7.Controls.Add(this.label11);
-            this.panel7.Controls.Add(this.label8);
-            this.panel7.Controls.Add(this.morning_rb);
-            this.panel7.Location = new System.Drawing.Point(3, 46);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(370, 365);
-            this.panel7.TabIndex = 0;
+            this.paste2_btn.Location = new System.Drawing.Point(236, 252);
+            this.paste2_btn.Name = "paste2_btn";
+            this.paste2_btn.Size = new System.Drawing.Size(91, 23);
+            this.paste2_btn.TabIndex = 5;
+            this.paste2_btn.Text = "paste clipboard";
+            this.paste2_btn.UseVisualStyleBackColor = true;
+            this.paste2_btn.Click += new System.EventHandler(this.paste2_btn_Click);
             // 
-            // label6
+            // paste1_btn
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(111, 56);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(120, 24);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Reading Link";
-            // 
-            // reading_tb
-            // 
-            this.reading_tb.Location = new System.Drawing.Point(4, 13);
-            this.reading_tb.Multiline = true;
-            this.reading_tb.Name = "reading_tb";
-            this.reading_tb.Size = new System.Drawing.Size(320, 28);
-            this.reading_tb.TabIndex = 0;
-            // 
-            // morning_rb
-            // 
-            this.morning_rb.Location = new System.Drawing.Point(18, 33);
-            this.morning_rb.Name = "morning_rb";
-            this.morning_rb.Size = new System.Drawing.Size(311, 79);
-            this.morning_rb.TabIndex = 0;
-            this.morning_rb.Text = "";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(125, 13);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(166, 24);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "What did we learn ";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(136, 13);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(57, 13);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "In Morning";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(140, 127);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(53, 13);
-            this.label9.TabIndex = 3;
-            this.label9.Text = "Afternoon";
-            // 
-            // afternoon_rb
-            // 
-            this.afternoon_rb.Location = new System.Drawing.Point(18, 145);
-            this.afternoon_rb.Name = "afternoon_rb";
-            this.afternoon_rb.Size = new System.Drawing.Size(311, 78);
-            this.afternoon_rb.TabIndex = 2;
-            this.afternoon_rb.Text = "";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(82, 163);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(168, 24);
-            this.label10.TabIndex = 2;
-            this.label10.Text = "Goodbye song link";
+            this.paste1_btn.Location = new System.Drawing.Point(237, 135);
+            this.paste1_btn.Name = "paste1_btn";
+            this.paste1_btn.Size = new System.Drawing.Size(91, 23);
+            this.paste1_btn.TabIndex = 4;
+            this.paste1_btn.Text = "paste clipboard";
+            this.paste1_btn.UseVisualStyleBackColor = true;
+            this.paste1_btn.Click += new System.EventHandler(this.paste1_btn_Click);
             // 
             // panel8
             // 
@@ -478,6 +411,99 @@
             this.song_tb.Size = new System.Drawing.Size(320, 28);
             this.song_tb.TabIndex = 0;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(82, 163);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(168, 24);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "Goodbye song link";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(111, 56);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(120, 24);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Reading Link";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(206)))), ((int)(((byte)(235)))));
+            this.panel6.Controls.Add(this.reading_tb);
+            this.panel6.Location = new System.Drawing.Point(4, 83);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(340, 53);
+            this.panel6.TabIndex = 0;
+            // 
+            // reading_tb
+            // 
+            this.reading_tb.Location = new System.Drawing.Point(4, 13);
+            this.reading_tb.Multiline = true;
+            this.reading_tb.Name = "reading_tb";
+            this.reading_tb.Size = new System.Drawing.Size(320, 28);
+            this.reading_tb.TabIndex = 0;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(125, 13);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(166, 24);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "What did we learn ";
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.loadbox2_btn);
+            this.panel7.Controls.Add(this.loadbox1_btn);
+            this.panel7.Controls.Add(this.saveCC_btn);
+            this.panel7.Controls.Add(this.panel9);
+            this.panel7.Controls.Add(this.label9);
+            this.panel7.Controls.Add(this.afternoon_rb);
+            this.panel7.Controls.Add(this.label11);
+            this.panel7.Controls.Add(this.label8);
+            this.panel7.Controls.Add(this.morning_rb);
+            this.panel7.Location = new System.Drawing.Point(3, 46);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(370, 365);
+            this.panel7.TabIndex = 0;
+            // 
+            // loadbox2_btn
+            // 
+            this.loadbox2_btn.Location = new System.Drawing.Point(254, 229);
+            this.loadbox2_btn.Name = "loadbox2_btn";
+            this.loadbox2_btn.Size = new System.Drawing.Size(75, 23);
+            this.loadbox2_btn.TabIndex = 8;
+            this.loadbox2_btn.Text = "Load text";
+            this.loadbox2_btn.UseVisualStyleBackColor = true;
+            this.loadbox2_btn.Click += new System.EventHandler(this.loadbox2_btn_Click);
+            // 
+            // loadbox1_btn
+            // 
+            this.loadbox1_btn.Location = new System.Drawing.Point(252, 117);
+            this.loadbox1_btn.Name = "loadbox1_btn";
+            this.loadbox1_btn.Size = new System.Drawing.Size(75, 23);
+            this.loadbox1_btn.TabIndex = 7;
+            this.loadbox1_btn.Text = "Load text";
+            this.loadbox1_btn.UseVisualStyleBackColor = true;
+            this.loadbox1_btn.Click += new System.EventHandler(this.loadbox1_btn_Click);
+            // 
+            // saveCC_btn
+            // 
+            this.saveCC_btn.Location = new System.Drawing.Point(252, 329);
+            this.saveCC_btn.Name = "saveCC_btn";
+            this.saveCC_btn.Size = new System.Drawing.Size(107, 33);
+            this.saveCC_btn.TabIndex = 6;
+            this.saveCC_btn.Text = "Save / Update";
+            this.saveCC_btn.UseVisualStyleBackColor = true;
+            this.saveCC_btn.Click += new System.EventHandler(this.saveCC_btn_Click);
+            // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(206)))), ((int)(((byte)(235)))));
@@ -495,6 +521,23 @@
             this.bookTitle_tb.Size = new System.Drawing.Size(320, 28);
             this.bookTitle_tb.TabIndex = 0;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(140, 127);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(53, 13);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "Afternoon";
+            // 
+            // afternoon_rb
+            // 
+            this.afternoon_rb.Location = new System.Drawing.Point(18, 145);
+            this.afternoon_rb.Name = "afternoon_rb";
+            this.afternoon_rb.Size = new System.Drawing.Size(311, 78);
+            this.afternoon_rb.TabIndex = 2;
+            this.afternoon_rb.Text = "";
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -505,64 +548,22 @@
             this.label11.TabIndex = 4;
             this.label11.Text = "Book Title";
             // 
-            // saveCC_btn
+            // label8
             // 
-            this.saveCC_btn.Location = new System.Drawing.Point(252, 329);
-            this.saveCC_btn.Name = "saveCC_btn";
-            this.saveCC_btn.Size = new System.Drawing.Size(107, 33);
-            this.saveCC_btn.TabIndex = 6;
-            this.saveCC_btn.Text = "Save / Update";
-            this.saveCC_btn.UseVisualStyleBackColor = true;
-            this.saveCC_btn.Click += new System.EventHandler(this.saveCC_btn_Click);
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(136, 13);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(57, 13);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "In Morning";
             // 
-            // loadbox1_btn
+            // morning_rb
             // 
-            this.loadbox1_btn.Location = new System.Drawing.Point(252, 117);
-            this.loadbox1_btn.Name = "loadbox1_btn";
-            this.loadbox1_btn.Size = new System.Drawing.Size(75, 23);
-            this.loadbox1_btn.TabIndex = 7;
-            this.loadbox1_btn.Text = "Load text";
-            this.loadbox1_btn.UseVisualStyleBackColor = true;
-            this.loadbox1_btn.Click += new System.EventHandler(this.loadbox1_btn_Click);
-            // 
-            // loadbox2_btn
-            // 
-            this.loadbox2_btn.Location = new System.Drawing.Point(254, 229);
-            this.loadbox2_btn.Name = "loadbox2_btn";
-            this.loadbox2_btn.Size = new System.Drawing.Size(75, 23);
-            this.loadbox2_btn.TabIndex = 8;
-            this.loadbox2_btn.Text = "Load text";
-            this.loadbox2_btn.UseVisualStyleBackColor = true;
-            this.loadbox2_btn.Click += new System.EventHandler(this.loadbox2_btn_Click);
-            // 
-            // paste1_btn
-            // 
-            this.paste1_btn.Location = new System.Drawing.Point(237, 135);
-            this.paste1_btn.Name = "paste1_btn";
-            this.paste1_btn.Size = new System.Drawing.Size(91, 23);
-            this.paste1_btn.TabIndex = 4;
-            this.paste1_btn.Text = "paste clipboard";
-            this.paste1_btn.UseVisualStyleBackColor = true;
-            this.paste1_btn.Click += new System.EventHandler(this.paste1_btn_Click);
-            // 
-            // paste2_btn
-            // 
-            this.paste2_btn.Location = new System.Drawing.Point(236, 252);
-            this.paste2_btn.Name = "paste2_btn";
-            this.paste2_btn.Size = new System.Drawing.Size(91, 23);
-            this.paste2_btn.TabIndex = 5;
-            this.paste2_btn.Text = "paste clipboard";
-            this.paste2_btn.UseVisualStyleBackColor = true;
-            this.paste2_btn.Click += new System.EventHandler(this.paste2_btn_Click);
-            // 
-            // status_lbl
-            // 
-            this.status_lbl.AutoSize = true;
-            this.status_lbl.Location = new System.Drawing.Point(115, 375);
-            this.status_lbl.Name = "status_lbl";
-            this.status_lbl.Size = new System.Drawing.Size(23, 13);
-            this.status_lbl.TabIndex = 6;
-            this.status_lbl.Text = "null";
+            this.morning_rb.Location = new System.Drawing.Point(18, 33);
+            this.morning_rb.Name = "morning_rb";
+            this.morning_rb.Size = new System.Drawing.Size(311, 79);
+            this.morning_rb.TabIndex = 0;
+            this.morning_rb.Text = "";
             // 
             // closing
             // 
@@ -576,6 +577,7 @@
             this.Name = "closing";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Closing Circle";
+            this.Load += new System.EventHandler(this.closing_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -603,12 +605,12 @@
             this.splitContainer2.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             this.ResumeLayout(false);

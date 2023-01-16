@@ -70,6 +70,30 @@ namespace Circle_Time
             Youtube yt = new Youtube();
                 yt.Show();
         }
+
+        /// <summary>
+        ///   Read a book 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            // open closing.text file
+            string path = "closing.txt";
+            string[] contents = System.IO.File.ReadAllLines(directory + @"\circle_time\" + path);
+            string book = contents[0];
+            // open book in browser
+            System.Diagnostics.Process.Start(book);
+        }
+
+
+        /*--------------------------------------------------------
+         * 
+         * 
+         *           CLOSING CIRCLE SETTINGS
+         * 
+         * -------------------------------------------------------
+         */
         /// <summary>
         ///  Paste Reading Link
         /// </summary>
@@ -145,6 +169,18 @@ namespace Circle_Time
             status_lbl.Text = "File has been Updated";
             admin.wait(3);
             status_lbl.Visible = false;
+        }
+
+        private void closing_Load(object sender, EventArgs e)
+        {
+            // load the contents of closing.txt into the text boxes
+            string path = "closing.txt";
+            string[] contents = System.IO.File.ReadAllLines(directory + @"\circle_time\" + path);
+            reading_tb.Text = contents[0];
+            song_tb.Text = contents[1];
+            morning_rb.Text = contents[2];
+            afternoon_rb.Text = contents[3];
+            bookTitle_tb.Text = contents[4];
         }
     }
 }
