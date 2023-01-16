@@ -30,22 +30,29 @@ namespace Circle_Time
         {
             InitializeComponent();
             // make Panels Transparent 
-            background_pb.Controls.Add(makechoice_panel);
-            background_pb.Controls.Add(whoshere_panel);
-            background_pb.Controls.Add(helloteachers_panel);
-            background_pb.Controls.Add(movement_panel);
-            background_pb.Controls.Add(readbook_panel);
-            background_pb.Controls.Add(questions_panel);
+           // background_pb.Controls.Add(makechoice_panel);
+           // background_pb.Controls.Add(whoshere_panel);
+           // background_pb.Controls.Add(helloteachers_panel);
+           // background_pb.Controls.Add(movement_panel);
+          //  background_pb.Controls.Add(readbook_panel);
+           // background_pb.Controls.Add(questions_panel);
             // nake icons transparent 
             background_pb.Controls.Add(icon1_pb);
             background_pb.Controls.Add(icon2_pb);
             // make Panels Draggable
-            makechoice_panel.Draggable(true);
-            whoshere_panel.Draggable(true);
-            helloteachers_panel.Draggable(true);
-            movement_panel.Draggable(true);
-            readbook_panel.Draggable(true);
-            questions_panel.Draggable(true);
+           // makechoice_panel.Draggable(true);
+           // whoshere_panel.Draggable(true);
+           // helloteachers_panel.Draggable(true);
+           // movement_panel.Draggable(true);
+           // readbook_panel.Draggable(true);
+           // questions_panel.Draggable(true);
+
+            mkchoice_pb.Draggable(true);
+            whoshere_pb.Draggable(true);
+           hiteacher_pb.Draggable(true);
+            movement_pb.Draggable(true);
+            reading_pb.Draggable(true);
+            questions_pb.Draggable(true);
 
             /// make go back labels transparent 
             background2_pb.Controls.Add(goback_lbl);
@@ -60,6 +67,12 @@ namespace Circle_Time
         private void Form1_Load(object sender, EventArgs e)
         {
             // get the property setting fo
+            mkchoice_pb.Location = new Point(729, 153);
+            whoshere_pb.Location = new Point(729, 222);
+            hiteacher_pb.Location = new Point(729, 293);
+            reading_pb.Location = new Point(729, 364);
+            movement_pb.Location = new Point(729, 433);
+            questions_pb.Location = new Point(729, 508);
         }
         /*---------------------------------------
          * 
@@ -89,12 +102,12 @@ namespace Circle_Time
         {
 
             // reset panel locations to origonal location
-            makechoice_panel.Location = new Point(729, 153);
-            whoshere_panel.Location = new Point(729, 222);
-            helloteachers_panel.Location = new Point(729, 293);
-            readbook_panel.Location = new Point(729, 364);
-            movement_panel.Location = new Point(729, 433);
-            questions_panel.Location = new Point(729, 508);
+            mkchoice_pb.Location = new Point(729, 153);
+            whoshere_pb.Location = new Point(729, 222);
+            hiteacher_pb.Location = new Point(729, 293);
+            reading_pb.Location = new Point(729, 364);
+            movement_pb.Location = new Point(729, 433);
+            questions_pb.Location = new Point(729, 508);
         }
         /// <summary>
         /// File Menu --> Settings 
@@ -161,27 +174,27 @@ namespace Circle_Time
                 tabControl1.TabPages.Add(tabPage3);
             }
             // change the background on the panels 
-            makechoice_panel.BackColor = Color.SeaGreen;
-            whoshere_panel.BackColor = Color.SeaGreen;
-            helloteachers_panel.BackColor = Color.SeaGreen;
-            movement_panel.BackColor = Color.SeaGreen;
-            readbook_panel.BackColor = Color.SeaGreen;
-            questions_panel.BackColor = Color.SeaGreen;
+            mkchoice_pb.BackColor = Color.SeaGreen;
+            whoshere_pb.BackColor = Color.SeaGreen;
+            hiteacher_pb.BackColor = Color.SeaGreen;
+            movement_pb.BackColor = Color.SeaGreen;
+            reading_pb.BackColor = Color.SeaGreen;
+            questions_pb.BackColor = Color.SeaGreen;
             // change the font style to bold for label1
-            label1.ForeColor = Color.WhiteSmoke;
-            label1.Font = new Font(label1.Font, FontStyle.Bold);
-            label2.ForeColor = Color.WhiteSmoke;
-            label2.Font = new Font(label2.Font, FontStyle.Bold);
-            label3.ForeColor = Color.WhiteSmoke;
-            label3.Font = new Font(label3.Font, FontStyle.Bold);
-            label4.ForeColor = Color.WhiteSmoke;
-            label4.Font = new Font(label4.Font, FontStyle.Bold);
-            label5.ForeColor = Color.WhiteSmoke;
-            label5.Font = new Font(label5.Font, FontStyle.Bold);
-            label6.ForeColor = Color.WhiteSmoke;
-            label6.Font = new Font(label6.Font, FontStyle.Bold);
+            // label1.ForeColor = Color.WhiteSmoke;
+            // label1.Font = new Font(label1.Font, FontStyle.Bold);
+            // label2.ForeColor = Color.WhiteSmoke;
+            // label2.Font = new Font(label2.Font, FontStyle.Bold);
+            // label3.ForeColor = Color.WhiteSmoke;
+            // label3.Font = new Font(label3.Font, FontStyle.Bold);
+            //  label4.ForeColor = Color.WhiteSmoke;
+            //  label4.Font = new Font(label4.Font, FontStyle.Bold);
+            //  label5.ForeColor = Color.WhiteSmoke;
+            //  label5.Font = new Font(label5.Font, FontStyle.Bold);
+            //  label6.ForeColor = Color.WhiteSmoke;
+            //  label6.Font = new Font(label6.Font, FontStyle.Bold);
             // timer1.Start();
-           // timer2.Start();
+            // timer2.Start();
         }
 
 
@@ -207,28 +220,33 @@ namespace Circle_Time
                 tabControl1.TabPages.Add(tabPage3);
             }
             // change the background on the panels 
-            makechoice_panel.BackColor = Color.FromArgb(245, 242, 223);
-            whoshere_panel.BackColor = Color.FromArgb(245, 242, 223);
-            helloteachers_panel.BackColor = Color.FromArgb(245, 242, 223);
-            movement_panel.BackColor = Color.FromArgb(245, 242, 223);
-            readbook_panel.BackColor = Color.FromArgb(245, 242, 223);
-            questions_panel.BackColor = Color.FromArgb(245, 242, 223);
+            mkchoice_pb.BackColor = Color.FromArgb(245, 242, 223);
+            whoshere_pb.BackColor = Color.FromArgb(245, 242, 223);
+            hiteacher_pb.BackColor = Color.FromArgb(245, 242, 223);
+            movement_pb.BackColor = Color.FromArgb(245, 242, 223);
+            reading_pb.BackColor = Color.FromArgb(245, 242, 223);
+            questions_pb.BackColor = Color.FromArgb(245, 242, 223);
+            // makechoice_panel.BackColor = Color.FromArgb(245, 242, 223);
+            // whoshere_panel.BackColor = Color.FromArgb(245, 242, 223);
+            // helloteachers_panel.BackColor = Color.FromArgb(245, 242, 223);
+            //  movement_panel.BackColor = Color.FromArgb(245, 242, 223);
+            //readbook_panel.BackColor = Color.FromArgb(245, 242, 223);
+            // questions_panel.BackColor = Color.FromArgb(245, 242, 223);
             // change the font style to bold for label1
-            label1.ForeColor = Color.IndianRed;
-            label1.Font = new Font(label1.Font, FontStyle.Bold);
-            label2.ForeColor = Color.IndianRed;
-            label2.Font = new Font(label2.Font, FontStyle.Bold);
-            label3.ForeColor = Color.IndianRed;
-            label3.Font = new Font(label3.Font, FontStyle.Bold);
-            label4.ForeColor = Color.IndianRed;
-            label4.Font = new Font(label4.Font, FontStyle.Bold);
-            label5.ForeColor = Color.IndianRed;
-            label5.Font = new Font(label5.Font, FontStyle.Bold);
-            label6.ForeColor = Color.IndianRed;
-            label6.Font = new Font(label6.Font, FontStyle.Bold);
+            // label1.ForeColor = Color.IndianRed;
+            // label2.ForeColor = Color.IndianRed;
+            //  label2.Font = new Font(label2.Font, FontStyle.Bold);
+            // label3.ForeColor = Color.IndianRed;
+            // label3.Font = new Font(label3.Font, FontStyle.Bold);
+            // label4.ForeColor = Color.IndianRed;
+            //  label4.Font = new Font(label4.Font, FontStyle.Bold);
+            // label5.ForeColor = Color.IndianRed;
+            //  label5.Font = new Font(label5.Font, FontStyle.Bold);
+            //  label6.ForeColor = Color.IndianRed;
+            // label6.Font = new Font(label6.Font, FontStyle.Bold);
         }
-        
-        
+
+
         /// <summary>
         ///  Theme Menu ---> Disney Theme
         /// </summary>
@@ -252,25 +270,31 @@ namespace Circle_Time
                 tabControl1.TabPages.Add(tabPage3);
             }
             // change the background on the panels 
-            makechoice_panel.BackColor = Color.FromArgb(192, 145, 137);
-            whoshere_panel.BackColor = Color.FromArgb(192, 145, 137);
-            helloteachers_panel.BackColor = Color.FromArgb(192, 145, 137);
-            movement_panel.BackColor = Color.FromArgb(192, 145, 137);
-            readbook_panel.BackColor = Color.FromArgb(192, 145, 137);
-            questions_panel.BackColor = Color.FromArgb(192, 145, 137);
+            mkchoice_pb.BackColor = Color.FromArgb(192, 145, 137);
+            whoshere_pb.BackColor = Color.FromArgb(192, 145, 137);
+            hiteacher_pb.BackColor = Color.FromArgb(192, 145, 137);
+            movement_pb.BackColor = Color.FromArgb(192, 145, 137);
+            reading_pb.BackColor = Color.FromArgb(192, 145, 137);
+            questions_pb.BackColor = Color.FromArgb(192, 145, 137);
+            //  makechoice_panel.BackColor = Color.FromArgb(192, 145, 137);
+            // whoshere_panel.BackColor = Color.FromArgb(192, 145, 137);
+            //  helloteachers_panel.BackColor = Color.FromArgb(192, 145, 137);
+            //  movement_panel.BackColor = Color.FromArgb(192, 145, 137);
+            //  readbook_panel.BackColor = Color.FromArgb(192, 145, 137);
+            //  questions_panel.BackColor = Color.FromArgb(192, 145, 137);
             // change the font style to bold for label1
-            label1.ForeColor = Color.Purple;
-            label1.Font = new Font(label1.Font, FontStyle.Bold);
-            label2.ForeColor = Color.Purple;
-            label2.Font = new Font(label2.Font, FontStyle.Bold);
-            label3.ForeColor = Color.Purple;
-            label3.Font = new Font(label3.Font, FontStyle.Bold);
-            label4.ForeColor = Color.Purple;
-            label4.Font = new Font(label4.Font, FontStyle.Bold);
-            label5.ForeColor = Color.Purple;
-            label5.Font = new Font(label5.Font, FontStyle.Bold);
-            label6.ForeColor = Color.Purple;
-            label6.Font = new Font(label6.Font, FontStyle.Bold);
+            //  label1.ForeColor = Color.Purple;
+            //  label1.Font = new Font(label1.Font, FontStyle.Bold);
+            //  label2.ForeColor = Color.Purple;
+            //  label2.Font = new Font(label2.Font, FontStyle.Bold);
+            // label3.ForeColor = Color.Purple;
+            //  label3.Font = new Font(label3.Font, FontStyle.Bold);
+            //   label4.ForeColor = Color.Purple;
+            //   label4.Font = new Font(label4.Font, FontStyle.Bold);
+            //   label5.ForeColor = Color.Purple;
+            //   label5.Font = new Font(label5.Font, FontStyle.Bold);
+            //   label6.ForeColor = Color.Purple;
+            // label6.Font = new Font(label6.Font, FontStyle.Bold);
         }
 
         /// <summary>
@@ -296,28 +320,34 @@ namespace Circle_Time
                 tabControl1.TabPages.Add(tabPage3);
             }
             // change the background on the panels 
-            makechoice_panel.BackColor = Color.FromArgb(162,215, 233);
-            whoshere_panel.BackColor = Color.FromArgb(162, 215, 233);
-            helloteachers_panel.BackColor = Color.FromArgb(162, 215, 233);
-            movement_panel.BackColor = Color.FromArgb(162, 215, 233);
-            readbook_panel.BackColor = Color.FromArgb(162, 215, 233);
-            questions_panel.BackColor = Color.FromArgb(162, 215, 233);
+            mkchoice_pb.BackColor = Color.FromArgb(162, 215, 233);
+            whoshere_pb.BackColor = Color.FromArgb(162, 215, 233);
+            hiteacher_pb.BackColor = Color.FromArgb(162, 215, 233);
+            movement_pb.BackColor = Color.FromArgb(162, 215, 233);
+            reading_pb.BackColor = Color.FromArgb(162, 215, 233);
+            questions_pb.BackColor = Color.FromArgb(162, 215, 233);
+            // makechoice_panel.BackColor = Color.FromArgb(162,215, 233);
+            //  whoshere_panel.BackColor = Color.FromArgb(162, 215, 233);
+            //  helloteachers_panel.BackColor = Color.FromArgb(162, 215, 233);
+            //  movement_panel.BackColor = Color.FromArgb(162, 215, 233);
+            //   readbook_panel.BackColor = Color.FromArgb(162, 215, 233);
+            // questions_panel.BackColor = Color.FromArgb(162, 215, 233);
             // change the font style to bold for label1
-            label1.ForeColor = Color.DarkOliveGreen;
-            label1.Font = new Font(label1.Font, FontStyle.Bold);
-            label2.ForeColor = Color.DarkOliveGreen;
-            label2.Font = new Font(label2.Font, FontStyle.Bold);
-            label3.ForeColor = Color.DarkOliveGreen;
-            label3.Font = new Font(label3.Font, FontStyle.Bold);
-            label4.ForeColor = Color.DarkOliveGreen;
-            label4.Font = new Font(label4.Font, FontStyle.Bold);
-            label5.ForeColor = Color.DarkOliveGreen;
-            label5.Font = new Font(label5.Font, FontStyle.Bold);
-            label6.ForeColor = Color.DarkOliveGreen;
-            label6.Font = new Font(label6.Font, FontStyle.Bold);
+            //   label1.ForeColor = Color.DarkOliveGreen;
+            //    label1.Font = new Font(label1.Font, FontStyle.Bold);
+            //   label2.ForeColor = Color.DarkOliveGreen;
+            //  label2.Font = new Font(label2.Font, FontStyle.Bold);
+            //   label3.ForeColor = Color.DarkOliveGreen;
+            //   label3.Font = new Font(label3.Font, FontStyle.Bold);
+            // label4.ForeColor = Color.DarkOliveGreen;
+            //    label4.Font = new Font(label4.Font, FontStyle.Bold);
+            //  label5.ForeColor = Color.DarkOliveGreen;
+            // label5.Font = new Font(label5.Font, FontStyle.Bold);
+            //   label6.ForeColor = Color.DarkOliveGreen;
+            // label6.Font = new Font(label6.Font, FontStyle.Bold);
         }
 
-        
+
         /// <summary>
         ///  Theme Menu ---> PBS Kids Theme
         /// </summary>
@@ -341,25 +371,31 @@ namespace Circle_Time
                 tabControl1.TabPages.Add(tabPage3);
             }
             // change the background on the panels 
-            makechoice_panel.BackColor = Color.FromArgb(239, 104, 176);
-            whoshere_panel.BackColor = Color.FromArgb(239, 104, 176);
-            helloteachers_panel.BackColor = Color.FromArgb(239, 104, 176);
-            movement_panel.BackColor = Color.FromArgb(239, 104, 176);
-            readbook_panel.BackColor = Color.FromArgb(239, 104, 176);
-            questions_panel.BackColor = Color.FromArgb(239, 104, 176);
+            mkchoice_pb.BackColor = Color.FromArgb(239, 104, 176);
+            whoshere_pb.BackColor = Color.FromArgb(239, 104, 176);
+            hiteacher_pb.BackColor = Color.FromArgb(239, 104, 176);
+            movement_pb.BackColor = Color.FromArgb(239, 104, 176);
+            reading_pb.BackColor = Color.FromArgb(239, 104, 176);
+            questions_pb.BackColor = Color.FromArgb(239, 104, 176);
+            //  makechoice_panel.BackColor = Color.FromArgb(239, 104, 176);
+            //  whoshere_panel.BackColor = Color.FromArgb(239, 104, 176);
+            // helloteachers_panel.BackColor = Color.FromArgb(239, 104, 176);
+            // movement_panel.BackColor = Color.FromArgb(239, 104, 176);
+            //  readbook_panel.BackColor = Color.FromArgb(239, 104, 176);
+            //  questions_panel.BackColor = Color.FromArgb(239, 104, 176);
             // change the font style to bold for label1
-            label1.ForeColor = Color.WhiteSmoke;
-            label1.Font = new Font(label1.Font, FontStyle.Bold);
-            label2.ForeColor = Color.WhiteSmoke;
-            label2.Font = new Font(label2.Font, FontStyle.Bold);
-            label3.ForeColor = Color.WhiteSmoke;
-            label3.Font = new Font(label3.Font, FontStyle.Bold);
-            label4.ForeColor = Color.WhiteSmoke;
-            label4.Font = new Font(label4.Font, FontStyle.Bold);
-            label5.ForeColor = Color.WhiteSmoke;
-            label5.Font = new Font(label5.Font, FontStyle.Bold);
-            label6.ForeColor = Color.WhiteSmoke;
-            label6.Font = new Font(label6.Font, FontStyle.Bold);
+            // label1.ForeColor = Color.WhiteSmoke;
+            //  label1.Font = new Font(label1.Font, FontStyle.Bold);
+            //  label2.ForeColor = Color.WhiteSmoke;
+            //  label2.Font = new Font(label2.Font, FontStyle.Bold);
+            //  label3.ForeColor = Color.WhiteSmoke;
+            //  label3.Font = new Font(label3.Font, FontStyle.Bold);
+            //  label4.ForeColor = Color.WhiteSmoke;
+            //  label4.Font = new Font(label4.Font, FontStyle.Bold);
+            // label5.ForeColor = Color.WhiteSmoke;
+            //   label5.Font = new Font(label5.Font, FontStyle.Bold);
+            // label6.ForeColor = Color.WhiteSmoke;
+            //  label6.Font = new Font(label6.Font, FontStyle.Bold);
         }
 
         /// <summary>
@@ -385,28 +421,34 @@ namespace Circle_Time
                 tabControl1.TabPages.Add(tabPage3);
             }
             // change the background on the panels 
-            makechoice_panel.BackColor = Color.FromArgb(243, 218, 117);
-            whoshere_panel.BackColor = Color.FromArgb(243, 218, 117);
-            helloteachers_panel.BackColor = Color.FromArgb(243, 218, 117);
-            movement_panel.BackColor = Color.FromArgb(243, 218, 117); 
-            readbook_panel.BackColor = Color.FromArgb(243, 218, 117);
-            questions_panel.BackColor = Color.FromArgb(243, 218, 117);
+            mkchoice_pb.BackColor = Color.FromArgb(243, 218, 117);
+            whoshere_pb.BackColor = Color.FromArgb(243, 218, 117);
+            hiteacher_pb.BackColor = Color.FromArgb(243, 218, 117);
+            movement_pb.BackColor = Color.FromArgb(243, 218, 117);
+            reading_pb.BackColor = Color.FromArgb(243, 218, 117);
+            questions_pb.BackColor = Color.FromArgb(243, 218, 117);
+            //  makechoice_panel.BackColor = Color.FromArgb(243, 218, 117);
+            //   whoshere_panel.BackColor = Color.FromArgb(243, 218, 117);
+            //  helloteachers_panel.BackColor = Color.FromArgb(243, 218, 117);
+            //  movement_panel.BackColor = Color.FromArgb(243, 218, 117); 
+            //  readbook_panel.BackColor = Color.FromArgb(243, 218, 117);
+            //   questions_panel.BackColor = Color.FromArgb(243, 218, 117);
             // change the font style to bold for label1
-            label1.ForeColor = Color.FromArgb(96, 43, 39);
-            label1.Font = new Font(label1.Font, FontStyle.Bold);
-            label2.ForeColor = Color.FromArgb(96, 43, 39);
-            label2.Font = new Font(label2.Font, FontStyle.Bold);
-            label3.ForeColor = Color.FromArgb(96, 43, 39);
-            label3.Font = new Font(label3.Font, FontStyle.Bold);
-            label4.ForeColor = Color.FromArgb(96, 43, 39);
-            label4.Font = new Font(label4.Font, FontStyle.Bold);
-            label5.ForeColor = Color.FromArgb(96, 43, 39);
-            label5.Font = new Font(label5.Font, FontStyle.Bold);
-            label6.ForeColor = Color.FromArgb(96, 43, 39);
-            label6.Font = new Font(label6.Font, FontStyle.Bold);
+            //   label1.ForeColor = Color.FromArgb(96, 43, 39);
+            //  label1.Font = new Font(label1.Font, FontStyle.Bold);
+            // label2.ForeColor = Color.FromArgb(96, 43, 39);
+            //  label2.Font = new Font(label2.Font, FontStyle.Bold);
+            // label3.ForeColor = Color.FromArgb(96, 43, 39);
+            // label3.Font = new Font(label3.Font, FontStyle.Bold);
+            //  label4.ForeColor = Color.FromArgb(96, 43, 39);
+            //  label4.Font = new Font(label4.Font, FontStyle.Bold);
+            //  label5.ForeColor = Color.FromArgb(96, 43, 39);
+            //  label5.Font = new Font(label5.Font, FontStyle.Bold);
+            //  label6.ForeColor = Color.FromArgb(96, 43, 39);
+            // label6.Font = new Font(label6.Font, FontStyle.Bold);
         }
-        
-        
+
+
         /// <summary>
         ///  Theme Menu ---> Space theme
         /// </summary>
@@ -430,25 +472,31 @@ namespace Circle_Time
                 tabControl1.TabPages.Add(tabPage3);
             }
             // change the background on the panels 
-            makechoice_panel.BackColor = Color.FromArgb(243, 218, 117);
-            whoshere_panel.BackColor = Color.FromArgb(243, 218, 117);
-            helloteachers_panel.BackColor = Color.FromArgb(243, 218, 117);
-            movement_panel.BackColor = Color.FromArgb(243, 218, 117);
-            readbook_panel.BackColor = Color.FromArgb(243, 218, 117);
-            questions_panel.BackColor = Color.FromArgb(243, 218, 117);
+            mkchoice_pb.BackColor = Color.FromArgb(243, 218, 117);
+            whoshere_pb.BackColor = Color.FromArgb(243, 218, 117);
+            hiteacher_pb.BackColor = Color.FromArgb(243, 218, 117);
+            movement_pb.BackColor = Color.FromArgb(243, 218, 117);
+            reading_pb.BackColor = Color.FromArgb(243, 218, 117);
+            questions_pb.BackColor = Color.FromArgb(243, 218, 117);
+            // makechoice_panel.BackColor = Color.FromArgb(243, 218, 117);
+            //   whoshere_panel.BackColor = Color.FromArgb(243, 218, 117);
+            //  helloteachers_panel.BackColor = Color.FromArgb(243, 218, 117);
+            //  movement_panel.BackColor = Color.FromArgb(243, 218, 117);
+            // readbook_panel.BackColor = Color.FromArgb(243, 218, 117);
+            //  questions_panel.BackColor = Color.FromArgb(243, 218, 117);
             // change the font style to bold for label1
-            label1.ForeColor = Color.Red;
-            label1.Font = new Font(label1.Font, FontStyle.Bold);
-            label2.ForeColor = Color.Red;
-            label2.Font = new Font(label2.Font, FontStyle.Bold);
-            label3.ForeColor = Color.Red; ;
-            label3.Font = new Font(label3.Font, FontStyle.Bold);
-            label4.ForeColor = Color.Red;
-            label4.Font = new Font(label4.Font, FontStyle.Bold);
-            label5.ForeColor = Color.Red;
-            label5.Font = new Font(label5.Font, FontStyle.Bold);
-            label6.ForeColor = Color.Red;
-            label6.Font = new Font(label6.Font, FontStyle.Bold);
+            //   label1.ForeColor = Color.Red;
+            //   label1.Font = new Font(label1.Font, FontStyle.Bold);
+            // label2.ForeColor = Color.Red;
+            //  label2.Font = new Font(label2.Font, FontStyle.Bold);
+            //  label3.ForeColor = Color.Red; ;
+            //  label3.Font = new Font(label3.Font, FontStyle.Bold);
+            //  label4.ForeColor = Color.Red;
+            //  label4.Font = new Font(label4.Font, FontStyle.Bold);
+            //  label5.ForeColor = Color.Red;
+            // label5.Font = new Font(label5.Font, FontStyle.Bold);
+            // label6.ForeColor = Color.Red;
+            //  label6.Font = new Font(label6.Font, FontStyle.Bold);
         }
         /// <summary>
         ///  Theme Menu ----> SpongeBob
@@ -473,25 +521,31 @@ namespace Circle_Time
                 tabControl1.TabPages.Add(tabPage3);
             }
             // change the background on the panels 
-            makechoice_panel.BackColor = Color.FromArgb(94, 205, 232);
-            whoshere_panel.BackColor = Color.FromArgb(94, 205, 232);
-            helloteachers_panel.BackColor = Color.FromArgb(94, 205, 232);
-            movement_panel.BackColor = Color.FromArgb(94, 205, 232);
-            readbook_panel.BackColor = Color.FromArgb(94, 205, 232);
-            questions_panel.BackColor = Color.FromArgb(94, 205, 232);
+            mkchoice_pb.BackColor = Color.FromArgb(94, 205, 232);
+            whoshere_pb.BackColor = Color.FromArgb(94, 205, 232);
+            hiteacher_pb.BackColor = Color.FromArgb(94, 205, 232);
+            movement_pb.BackColor = Color.FromArgb(94, 205, 232);
+            reading_pb.BackColor = Color.FromArgb(94, 205, 232);
+            questions_pb.BackColor = Color.FromArgb(94, 205, 232);
+            //  makechoice_panel.BackColor = Color.FromArgb(94, 205, 232);
+            //  whoshere_panel.BackColor = Color.FromArgb(94, 205, 232);
+            //  helloteachers_panel.BackColor = Color.FromArgb(94, 205, 232);
+            // movement_panel.BackColor = Color.FromArgb(94, 205, 232);
+            //   readbook_panel.BackColor = Color.FromArgb(94, 205, 232);
+            // questions_panel.BackColor = Color.FromArgb(94, 205, 232);
             // change the font style to bold for label1
-            label1.ForeColor = Color.FromArgb(255, 248, 178);
-            label1.Font = new Font(label1.Font, FontStyle.Bold);
-            label2.ForeColor = Color.FromArgb(255, 248, 178);
-            label2.Font = new Font(label2.Font, FontStyle.Bold);
-            label3.ForeColor = Color.FromArgb(255, 248, 178);
-            label3.Font = new Font(label3.Font, FontStyle.Bold);
-            label4.ForeColor = Color.FromArgb(255, 248, 178);
-            label4.Font = new Font(label4.Font, FontStyle.Bold);
-            label5.ForeColor = Color.FromArgb(255, 248, 178);
-            label5.Font = new Font(label5.Font, FontStyle.Bold);
-            label6.ForeColor = Color.FromArgb(255, 248, 178);
-            label6.Font = new Font(label6.Font, FontStyle.Bold);
+            //   label1.ForeColor = Color.FromArgb(255, 248, 178);
+            // label1.Font = new Font(label1.Font, FontStyle.Bold);
+            //  label2.ForeColor = Color.FromArgb(255, 248, 178);
+            //  label2.Font = new Font(label2.Font, FontStyle.Bold);
+            // label3.ForeColor = Color.FromArgb(255, 248, 178);
+            //  label3.Font = new Font(label3.Font, FontStyle.Bold);
+            // label4.ForeColor = Color.FromArgb(255, 248, 178);
+            // label4.Font = new Font(label4.Font, FontStyle.Bold);
+            // label5.ForeColor = Color.FromArgb(255, 248, 178);
+            // label5.Font = new Font(label5.Font, FontStyle.Bold);
+            //  label6.ForeColor = Color.FromArgb(255, 248, 178);
+            // label6.Font = new Font(label6.Font, FontStyle.Bold);
         }
 
         /// <summary>
@@ -517,25 +571,31 @@ namespace Circle_Time
                 tabControl1.TabPages.Add(tabPage3);
             }
             // change panel colors 
-            makechoice_panel.BackColor = Color.FromArgb(197,155,139);
-          whoshere_panel.BackColor = Color.FromArgb(197, 155, 139);
-            helloteachers_panel.BackColor = Color.FromArgb(197, 155, 139);
-            movement_panel.BackColor = Color.FromArgb(197, 155, 139);
-            readbook_panel.BackColor = Color.FromArgb(197, 155, 139);
-            questions_panel.BackColor = Color.FromArgb(197, 155, 139);
+            mkchoice_pb.BackColor = Color.FromArgb(197, 155, 139);
+            whoshere_pb.BackColor = Color.FromArgb(197, 155, 139);
+            hiteacher_pb.BackColor = Color.FromArgb(197, 155, 139);
+            movement_pb.BackColor = Color.FromArgb(197, 155, 139);
+            reading_pb.BackColor = Color.FromArgb(197, 155, 139);
+            questions_pb.BackColor = Color.FromArgb(197, 155, 139);
+            //   makechoice_panel.BackColor = Color.FromArgb(197,155,139);
+            //   whoshere_panel.BackColor = Color.FromArgb(197, 155, 139);
+            //  helloteachers_panel.BackColor = Color.FromArgb(197, 155, 139);
+            // movement_panel.BackColor = Color.FromArgb(197, 155, 139);
+            // readbook_panel.BackColor = Color.FromArgb(197, 155, 139);
+            //   questions_panel.BackColor = Color.FromArgb(197, 155, 139);
             // change the font style to bold for label1
-            label1.ForeColor = Color.FromArgb(255, 248, 178);
-            label1.Font = new Font(label1.Font, FontStyle.Bold);
-            label2.ForeColor = Color.FromArgb(255, 248, 178);
-            label2.Font = new Font(label2.Font, FontStyle.Bold);
-            label3.ForeColor = Color.FromArgb(255, 248, 178);
-            label3.Font = new Font(label3.Font, FontStyle.Bold);
-            label4.ForeColor = Color.FromArgb(255, 248, 178);
-            label4.Font = new Font(label4.Font, FontStyle.Bold);
-            label5.ForeColor = Color.FromArgb(255, 248, 178);
-            label5.Font = new Font(label5.Font, FontStyle.Bold);
-            label6.ForeColor = Color.FromArgb(255, 248, 178);
-            label6.Font = new Font(label6.Font, FontStyle.Bold);
+            //  label1.ForeColor = Color.FromArgb(255, 248, 178);
+            //  label1.Font = new Font(label1.Font, FontStyle.Bold);
+            //  label2.ForeColor = Color.FromArgb(255, 248, 178);
+            //  label2.Font = new Font(label2.Font, FontStyle.Bold);
+            // label3.ForeColor = Color.FromArgb(255, 248, 178);
+            //  label3.Font = new Font(label3.Font, FontStyle.Bold);
+            // label4.ForeColor = Color.FromArgb(255, 248, 178);
+            //  label4.Font = new Font(label4.Font, FontStyle.Bold);
+            //  label5.ForeColor = Color.FromArgb(255, 248, 178);
+            //   label5.Font = new Font(label5.Font, FontStyle.Bold);
+            //   label6.ForeColor = Color.FromArgb(255, 248, 178);
+            //   label6.Font = new Font(label6.Font, FontStyle.Bold);
         }
 
         /// <summary>
@@ -561,25 +621,31 @@ namespace Circle_Time
                 tabControl1.TabPages.Add(tabPage3);
             }
             // change the background on the panels 
-            makechoice_panel.BackColor = Color.FromArgb(85, 29, 88);
-            whoshere_panel.BackColor = Color.FromArgb(85, 29, 88);
-            helloteachers_panel.BackColor = Color.FromArgb(85, 29, 88);
-            movement_panel.BackColor = Color.FromArgb(85, 29, 88);
-            readbook_panel.BackColor = Color.FromArgb(85, 29, 88);
-            questions_panel.BackColor = Color.FromArgb(85, 29, 88);
+            mkchoice_pb.BackColor = Color.FromArgb(85, 29, 88);
+            whoshere_pb.BackColor = Color.FromArgb(85, 29, 88);
+            hiteacher_pb.BackColor = Color.FromArgb(85, 29, 88);
+            movement_pb.BackColor = Color.FromArgb(85, 29, 88);
+            reading_pb.BackColor = Color.FromArgb(85, 29, 88);
+            questions_pb.BackColor = Color.FromArgb(85, 29, 88);
+            // makechoice_panel.BackColor = Color.FromArgb(85, 29, 88);
+            //   whoshere_panel.BackColor = Color.FromArgb(85, 29, 88);
+            //  helloteachers_panel.BackColor = Color.FromArgb(85, 29, 88);
+            // movement_panel.BackColor = Color.FromArgb(85, 29, 88);
+            //  readbook_panel.BackColor = Color.FromArgb(85, 29, 88);
+            //  questions_panel.BackColor = Color.FromArgb(85, 29, 88);
             // change the font style to bold for label1
-            label1.ForeColor = Color.FromArgb(229, 165, 78);
-            label1.Font = new Font(label1.Font, FontStyle.Bold);
-            label2.ForeColor = Color.FromArgb(229, 165, 78);
-            label2.Font = new Font(label2.Font, FontStyle.Bold);
-            label3.ForeColor = Color.FromArgb(229, 165, 78);
-            label3.Font = new Font(label3.Font, FontStyle.Bold);
-            label4.ForeColor = Color.FromArgb(229, 165, 78);
-            label4.Font = new Font(label4.Font, FontStyle.Bold);
-            label5.ForeColor = Color.FromArgb(229, 165, 78);
-            label5.Font = new Font(label5.Font, FontStyle.Bold);
-            label6.ForeColor = Color.FromArgb(229, 165, 78);
-            label6.Font = new Font(label6.Font, FontStyle.Bold);
+            // label1.ForeColor = Color.FromArgb(229, 165, 78);
+            //  label1.Font = new Font(label1.Font, FontStyle.Bold);
+            //  label2.ForeColor = Color.FromArgb(229, 165, 78);
+            //  label2.Font = new Font(label2.Font, FontStyle.Bold);
+            // label3.ForeColor = Color.FromArgb(229, 165, 78);
+            //  label3.Font = new Font(label3.Font, FontStyle.Bold);
+            // label4.ForeColor = Color.FromArgb(229, 165, 78);
+            //  label4.Font = new Font(label4.Font, FontStyle.Bold);
+            // label5.ForeColor = Color.FromArgb(229, 165, 78);
+            //  label5.Font = new Font(label5.Font, FontStyle.Bold);
+            // label6.ForeColor = Color.FromArgb(229, 165, 78);
+            // label6.Font = new Font(label6.Font, FontStyle.Bold);
         }
         /// ======================================
         ///   
