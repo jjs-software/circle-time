@@ -790,6 +790,14 @@ namespace Circle_Time
             }            
         }
 
-       
+        private void aboutCircleTimeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string version;
+                // get application version set it to version string 
+                version = Application.ProductVersion;
+            string author = "Jeremy Stevens";
+            // pop up version number + about
+            MessageBox.Show("Circle Time Version: " + version + " By: " + author);
+        }
     } // class .
 } // method 

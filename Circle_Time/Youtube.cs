@@ -27,9 +27,6 @@ namespace Circle_Time
         {
             MessageBox.Show(error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-       
-      
-
         /// <summary>
         ///  YOUTUBE LOAD EVENTS 
         /// </summary>
