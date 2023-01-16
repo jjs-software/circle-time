@@ -22,6 +22,13 @@ namespace Circle_Time
         {
             InitializeComponent();
         }
+        // error handling
+        private void error(string error)
+        {
+            MessageBox.Show(error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+       
+      
 
         /// <summary>
         ///  YOUTUBE LOAD EVENTS 
@@ -43,9 +50,9 @@ namespace Circle_Time
         /// Go Back to morning Circle 
         private void morningCircleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form1 f1 = (Form1)Application.OpenForms["Form1"];
-            f1.Show();
-            Hide();
+                Form1 f1 = (Form1)Application.OpenForms["Form1"];
+                f1.Show();
+                Hide();
         }
         /// <summary>
         ///  Go Back to Closing Circle
