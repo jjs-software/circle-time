@@ -82,7 +82,7 @@ namespace Circle_Time
             {
                 f1.Show();
             }
-        Hide();
+            Hide();
         }
         
         // check for internet connection  ADDED ON 01/03/23 To Prevent Endless Looping
