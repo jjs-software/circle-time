@@ -22,6 +22,13 @@ namespace Circle_Time
         {
             InitializeComponent();
         }
+        // error handling
+        private void error(string error)
+        {
+            MessageBox.Show(error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+       
+      
 
         /// <summary>
         ///  YOUTUBE LOAD EVENTS 
