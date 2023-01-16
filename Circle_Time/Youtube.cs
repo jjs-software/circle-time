@@ -77,8 +77,12 @@ namespace Circle_Time
         private void Youtube_FormClosed(object sender, FormClosedEventArgs e)
         {
             Form1 f1 = (Form1)Application.OpenForms["Form1"];
-            f1.Show();
-            Hide();
+            // prevent null exception error 
+            if (f1 != null)
+            {
+                f1.Show();
+            }
+        Hide();
         }
         
         // check for internet connection  ADDED ON 01/03/23 To Prevent Endless Looping
