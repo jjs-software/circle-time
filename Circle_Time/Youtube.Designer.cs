@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.kryptonTabControl1 = new AC.ExtendedRenderer.Navigator.KryptonTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.getVids_btn = new System.Windows.Forms.Button();
@@ -66,6 +67,9 @@
             this.goBackCloseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.morningCircleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closingCircleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.countDown_lbl = new System.Windows.Forms.Label();
             this.kryptonTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.gb6.SuspendLayout();
@@ -116,6 +120,8 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.DimGray;
+            this.tabPage1.Controls.Add(this.countDown_lbl);
+            this.tabPage1.Controls.Add(this.linkLabel1);
             this.tabPage1.Controls.Add(this.getVids_btn);
             this.tabPage1.Controls.Add(this.gb6);
             this.tabPage1.Controls.Add(this.gb5);
@@ -451,7 +457,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label3.Location = new System.Drawing.Point(127, 208);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 16);
+            this.label3.Size = new System.Drawing.Size(45, 16);
             this.label3.TabIndex = 3;
             this.label3.Text = "List #2";
             // 
@@ -471,7 +477,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(127, 68);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 16);
+            this.label2.Size = new System.Drawing.Size(45, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "List #1";
             // 
@@ -512,7 +518,7 @@
             this.closingCircleToolStripMenuItem});
             this.goBackCloseToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.backbutton;
             this.goBackCloseToolStripMenuItem.Name = "goBackCloseToolStripMenuItem";
-            this.goBackCloseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.goBackCloseToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.goBackCloseToolStripMenuItem.Text = "Go Back ";
             this.goBackCloseToolStripMenuItem.Click += new System.EventHandler(this.goBackCloseToolStripMenuItem_Click);
             // 
@@ -520,7 +526,7 @@
             // 
             this.morningCircleToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.morning_icon;
             this.morningCircleToolStripMenuItem.Name = "morningCircleToolStripMenuItem";
-            this.morningCircleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.morningCircleToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.morningCircleToolStripMenuItem.Text = "Morning Circle";
             this.morningCircleToolStripMenuItem.Click += new System.EventHandler(this.morningCircleToolStripMenuItem_Click);
             // 
@@ -528,9 +534,37 @@
             // 
             this.closingCircleToolStripMenuItem.Image = global::Circle_Time.Properties.Resources.presentation;
             this.closingCircleToolStripMenuItem.Name = "closingCircleToolStripMenuItem";
-            this.closingCircleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.closingCircleToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.closingCircleToolStripMenuItem.Text = "Closing Circle";
             this.closingCircleToolStripMenuItem.Click += new System.EventHandler(this.closingCircleToolStripMenuItem_Click);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(685, 613);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(71, 13);
+            this.linkLabel1.TabIndex = 11;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Random Spin";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 400;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // countDown_lbl
+            // 
+            this.countDown_lbl.AutoSize = true;
+            this.countDown_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.countDown_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 63.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.countDown_lbl.Location = new System.Drawing.Point(483, 527);
+            this.countDown_lbl.Name = "countDown_lbl";
+            this.countDown_lbl.Size = new System.Drawing.Size(87, 96);
+            this.countDown_lbl.TabIndex = 12;
+            this.countDown_lbl.Text = "5";
+            this.countDown_lbl.Visible = false;
             // 
             // Youtube
             // 
@@ -548,6 +582,7 @@
             this.Load += new System.EventHandler(this.Youtube_Load);
             this.kryptonTabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.gb6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pb6)).EndInit();
             this.gb5.ResumeLayout(false);
@@ -617,5 +652,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem morningCircleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem closingCircleToolStripMenuItem;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label countDown_lbl;
     }
 }
