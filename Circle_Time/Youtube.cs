@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -18,6 +19,8 @@ namespace Circle_Time
     public partial class Youtube : Form
     {
         ytclass yt = new ytclass();
+        int g = 0;
+        int cd = 5;
         public Youtube()
         {
             InitializeComponent();
@@ -28,7 +31,7 @@ namespace Circle_Time
             MessageBox.Show(error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         /// <summary>
-        ///  YOUTUBE LOAD EVENTS 
+        ///  YOUTUBE LOAD EVENTS
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -36,15 +39,16 @@ namespace Circle_Time
         {
             numericUpDown1.Value = 2;
             numericUpDown1.Refresh();
+            tabPage1.Controls.Add(countDown_lbl);
         }
 
         /// <summary>
-        ///  CLOSE WINDOW EVENTS 
+        ///  CLOSE WINDOW EVENTS
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        /// 
-        /// Go Back to morning Circle 
+        ///
+        /// Go Back to morning Circle
         private void morningCircleToolStripMenuItem_Click(object sender, EventArgs e)
         {
                 Form1 f1 = (Form1)Application.OpenForms["Form1"];
@@ -74,21 +78,21 @@ namespace Circle_Time
         }
         private void goBackCloseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           // do nothing 
+           // do nothing
         }
 
         // FORM CLOSE VIA CONTROLBOX
         private void Youtube_FormClosed(object sender, FormClosedEventArgs e)
         {
             Form1 f1 = (Form1)Application.OpenForms["Form1"];
-            // prevent null exception error 
+            // prevent null exception error
             if (f1 != null)
             {
                 f1.Show();
             }
             Hide();
         }
-        
+
         // check for internet connection  ADDED ON 01/03/23 To Prevent Endless Looping
         static bool checkInternet()
         {
@@ -138,11 +142,16 @@ namespace Circle_Time
                     // Only 1 Video
                     case 0:
                     start0:
-                        Thread t = new Thread(new ThreadStart(yt.RndVideo));
-                        t.Start();
+                        Task task = new Task(yt.RndVideo);
+                        task.Start();
+                        //Thread t = new Thread(new ThreadStart(yt.RndVideo));
+                        //t.Start();
                         if (yt.videoselection == null)
                         {
-                            yt.RndVideo();
+                            Task task2 = new Task(yt.RndVideo);
+                            task2.Start();
+                            return;
+                            // yt.RndVideo();
                         }
                         // link used for pb click
                         yt.v1 = yt.videoselection;
@@ -160,14 +169,18 @@ namespace Circle_Time
                         }
                         break;
 
-                    // Two Videos 
+                    // Two Videos
                     case 1:
                     start1:
                         Thread t1 = new Thread(new ThreadStart(yt.RndVideo));
                         t1.Start();
                         if (yt.videoselection == null)
                         {
-                            yt.RndVideo();
+                            // yt.RndVideo();
+
+                            Task task2 = new Task(yt.RndVideo);
+                            task2.Start();
+                            return;
                         }
                         // used for pb2 click
                         yt.v2 = yt.videoselection;
@@ -185,16 +198,20 @@ namespace Circle_Time
                         }
                         break;
 
-                    // Three Videos 
+                    // Three Videos
                     case 2:
                     start2:
                         Thread t2 = new Thread(new ThreadStart(yt.RndVideo));
                         t2.Start();
                         if (yt.videoselection == null)
                         {
-                            yt.RndVideo();
+                            // yt.RndVideo();
+
+                            Task task2 = new Task(yt.RndVideo);
+                            task2.Start();
+                            return;
                         }
-                        // used for pb3 click 
+                        // used for pb3 click
                         yt.v3 = yt.videoselection;
                         //Console.WriteLine(videoselection);
                         try
@@ -211,16 +228,20 @@ namespace Circle_Time
                         }
                         break;
 
-                    // Four Videos 
+                    // Four Videos
                     case 3:
                     start3:
                         Thread t3 = new Thread(new ThreadStart(yt.RndVideo));
                         t3.Start();
                         if (yt.videoselection == null)
                         {
-                            yt.RndVideo();
+                            // yt.RndVideo();
+
+                            Task task2 = new Task(yt.RndVideo);
+                            task2.Start();
+                            return;
                         }
-                        // used for pb4 click 
+                        // used for pb4 click
                         yt.v4 = yt.videoselection;
                         //Console.WriteLine(videoselection);
                         try
@@ -242,9 +263,12 @@ namespace Circle_Time
                         t4.Start();
                         if (yt.videoselection == null)
                         {
-                            yt.RndVideo();
+                            // yt.RndVideo();
+                            Task task2 = new Task(yt.RndVideo);
+                            task2.Start();
+                            return;
                         }
-                        // used for pb5 click 
+                        // used for pb5 click
                         yt.v5 = yt.videoselection;
                         //Console.WriteLine(videoselection);
                         try
@@ -266,9 +290,13 @@ namespace Circle_Time
                         t5.Start();
                         if (yt.videoselection == null)
                         {
-                            yt.RndVideo();
+                            // yt.RndVideo();
+
+                            Task task2 = new Task(yt.RndVideo);
+                            task2.Start();
+                            return;
                         }
-                        // used for pb6 click 
+                        // used for pb6 click
                         yt.v6 = yt.videoselection;
                         //Console.WriteLine(videoselection);
                         try
@@ -288,10 +316,10 @@ namespace Circle_Time
                 } // end of switch
             } // end of for loop
         }
-// Picturebox1 click event 
+// Picturebox1 click event
 private void pb1_Click(object sender, EventArgs e)
         {
-            // Stop Null box clicks 
+            // Stop Null box clicks
             if (yt.v1 == null)
             {
                 return;
@@ -302,7 +330,7 @@ private void pb1_Click(object sender, EventArgs e)
         //picturebox2 click event
         private void pb2_Click(object sender, EventArgs e)
         {
-            // Stop Null box clicks 
+            // Stop Null box clicks
             if (yt.v2 == null)
             {
                 return;
@@ -313,7 +341,7 @@ private void pb1_Click(object sender, EventArgs e)
         // Picturebox3 click event
         private void pb3_Click(object sender, EventArgs e)
         {
-            // Stop Null box clicks 
+            // Stop Null box clicks
             if (yt.v3 == null)
             {
                 return;
@@ -324,7 +352,7 @@ private void pb1_Click(object sender, EventArgs e)
         // picturebox4 click event
         private void pb4_Click(object sender, EventArgs e)
         {
-            // Stop Null box clicks 
+            // Stop Null box clicks
             if (yt.v4 == null)
             {
                 return;
@@ -335,7 +363,7 @@ private void pb1_Click(object sender, EventArgs e)
         //picturebox5 click event
         private void pb5_Click(object sender, EventArgs e)
         {
-            // Stop Null box clicks 
+            // Stop Null box clicks
             if (yt.v5 == null)
             {
                 return;
@@ -346,7 +374,7 @@ private void pb1_Click(object sender, EventArgs e)
         //Picturebo6 click event
         private void pb6_Click(object sender, EventArgs e)
         {
-            // Stop Null box clicks 
+            // Stop Null box clicks
             if (yt.v6 == null)
             {
                 return;
@@ -355,14 +383,14 @@ private void pb1_Click(object sender, EventArgs e)
         }
 
         /*---------------------------------------------------------
-        * 
-        * 
-        *                 YT SETTINGS HERE 
-        *      
-        * 
+        *
+        *
+        *                 YT SETTINGS HERE
+        *
+        *
         * --------------------------------------------------------
         */
-        //Auto Load List #1 Button CLick 
+        //Auto Load List #1 Button CLick
         private void autoLoad1_btn_Click(object sender, EventArgs e)
         {
             try
@@ -387,14 +415,14 @@ private void pb1_Click(object sender, EventArgs e)
                     // Save Settings
                     Properties.Settings.Default.filelocation = TargetPath;
                     Properties.Settings.Default.Save();
-                    // New Reader 
+                    // New Reader
                     using (StreamReader reader = new StreamReader(TargetPath))
                     {
-                        // Read to end 
+                        // Read to end
                         yt.fileContent = reader.ReadToEnd();
                         var videolist = File.ReadAllLines(TargetPath);
                         var youtubelist = new List<string>(videolist);
-                        // count the number of videos 
+                        // count the number of videos
                         var lineCount = File.ReadAllLines(TargetPath).Length;
                         status_lbl.ForeColor = Color.Blue;
                         status_lbl.Text = Convert.ToString(lineCount) + " Videos Loaded";
@@ -437,14 +465,14 @@ private void pb1_Click(object sender, EventArgs e)
                     // Save Settings
                     Properties.Settings.Default.filelocation = TargetPath;
                     Properties.Settings.Default.Save();
-                    // New Reader 
+                    // New Reader
                     using (StreamReader reader = new StreamReader(TargetPath))
                     {
-                        // Read to end 
+                        // Read to end
                         yt.fileContent = reader.ReadToEnd();
                         var videolist = File.ReadAllLines(TargetPath);
                         var youtubelist = new List<string>(videolist);
-                        // count the number of videos 
+                        // count the number of videos
                         var lineCount = File.ReadAllLines(TargetPath).Length;
                         status_lbl.ForeColor = Color.Blue;
                         status_lbl.Text = Convert.ToString(lineCount) + " Videos Loaded";
@@ -462,7 +490,7 @@ private void pb1_Click(object sender, EventArgs e)
             } // end of catch
         }
 
-        // Manually Load List button click 
+        // Manually Load List button click
         private void loadlist_btn_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
@@ -483,11 +511,11 @@ private void pb1_Click(object sender, EventArgs e)
 
                     using (StreamReader reader = new StreamReader(fileStream))
                     {
-                        // read the content and then put it int a list of strings 
+                        // read the content and then put it int a list of strings
                         yt.fileContent = reader.ReadToEnd();
                         var videolist = File.ReadAllLines(yt.filePath);
                         var youtubelist = new List<string>(videolist);
-                        // count the number of videos 
+                        // count the number of videos
                         var lineCount = File.ReadAllLines(yt.filePath).Length;
                         status_lbl.ForeColor = Color.Blue;
                         status_lbl.Text = Convert.ToString(lineCount) + " Videos Loaded";
@@ -506,7 +534,7 @@ private void pb1_Click(object sender, EventArgs e)
             switch (number)
             {
                 case 1:
-                    // only show 1 groupbox 
+                    // only show 1 groupbox
                     gb1.Show();
                     gb2.Hide();
                     gb3.Hide();
@@ -525,9 +553,9 @@ private void pb1_Click(object sender, EventArgs e)
                     // reset to gb1 to default size
                     gb1.Width = 522;
                     gb1.Height = 422;
-                    // move gb2 over to the right 
+                    // move gb2 over to the right
                     gb2.Location = new Point(756, 69);
-                    // make gb2 larger 
+                    // make gb2 larger
                     gb2.Width = 522;
                     gb2.Height = 422;
                     gb1.Update();
@@ -616,6 +644,53 @@ private void pb1_Click(object sender, EventArgs e)
             }
         }
 
-       
+        #region ranadomspinner
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            // reset cd & g's value
+            g = 0;
+            cd = 6;
+            countDown_lbl.Text = null;
+            countDown_lbl.Visible = true;
+            // check if the yt.youtubelist is empty
+            if (yt.youtubelist.Count < 1)
+            {
+                MessageBox.Show("Please load list first");
+                return;
+            }
+            timer1.Start();
+        }
+        #endregion
+
+
+        #region random_spinner_timer
+        /// <summary>
+        ///  Timer for Random Spinner
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            admin admin = new admin();
+            // get video selection from yt.youtubelist
+            var random = new Random();
+            var watch = Stopwatch.StartNew();
+            while (g < 6)
+            {
+                getVids_btn.PerformClick();
+                Console.WriteLine(g);
+                g = g + 1;
+                cd = cd - 1;
+                countDown_lbl.Text = cd.ToString();
+                if (cd <= 0)
+                {
+                    countDown_lbl.Visible = false;
+                }
+                admin.wait(500);
+            }
+            watch.Stop();
+            timer1.Stop();
+        }
+        #endregion
     }
 }
