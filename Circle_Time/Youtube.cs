@@ -644,7 +644,7 @@ private void pb1_Click(object sender, EventArgs e)
             }
         }
 
-        #region ranadomspinner 
+        #region ranadomspinner
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             // reset cd & g's value
@@ -652,6 +652,12 @@ private void pb1_Click(object sender, EventArgs e)
             cd = 6;
             countDown_lbl.Text = null;
             countDown_lbl.Visible = true;
+            // check if the yt.youtubelist is empty
+            if (yt.youtubelist.Count < 1)
+            {
+                MessageBox.Show("Please load list first");
+                return;
+            }
             timer1.Start();
         }
         #endregion
@@ -659,13 +665,15 @@ private void pb1_Click(object sender, EventArgs e)
 
         #region random_spinner_timer
         /// <summary>
-        ///  Timer for Random Spinner 
+        ///  Timer for Random Spinner
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void timer1_Tick(object sender, EventArgs e)
         {
             admin admin = new admin();
+            // get video selection from yt.youtubelist
+            var random = new Random();
             var watch = Stopwatch.StartNew();
             while (g < 6)
             {
@@ -683,6 +691,6 @@ private void pb1_Click(object sender, EventArgs e)
             watch.Stop();
             timer1.Stop();
         }
-        #endregion 
+        #endregion
     }
 }
